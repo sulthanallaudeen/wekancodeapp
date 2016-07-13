@@ -2,10 +2,10 @@
 <widget id="io.cordova.wekancode" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>WeKanCode</name>
     <description>
-        A sample Apache Cordova application that responds to the deviceready event.
+        WeKancode Application
     </description>
-    <author email="sulthan.a@wekancode.com" href="http://wekancode.com">
-        WeKanCode
+    <author email="dev@cordova.apache.org" href="http://WeKancode.com">
+        WeKanCode Application
     </author>
     <icon src="www/images/logo.png"></icon>
     <content src="index.html" />

@@ -56,9 +56,13 @@ else
                 if (message.success == 1)
                 {
                 	localStorage.setItem("user_id", message.data.id);
-                    localStorage.setItem("user_name", message.data.first_name+' '+message.data.last_name);
+                    localStorage.setItem("user_name", message.data.first_name);
+                    localStorage.setItem("full_name", message.data.first_name+' '+message.data.last_name);
                     localStorage.setItem("user_email", message.data.email);
                     localStorage.setItem("user_designation", message.data.designation);
+                    localStorage.setItem("user_image", message.data.image);
+                    localStorage.setItem("user_tel", message.data.phone);
+                    localStorage.setItem("user_about", message.data.about);
                     window.location.href = "dashboard.html";
                 } else
                 {

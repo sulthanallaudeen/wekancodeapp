@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!--================================================================================
+<!--
+================================================================================
   Project : Wekancode Mobile App
-  Version : 1.0
+  Version : 1.1
   Author  : Sutlhan Alaludeen
   Author URL: http://www.sulthanallaudeen.com
-================================================================================ -->
-
-
-
+================================================================================
+-->
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
@@ -20,27 +19,23 @@
     <title>WekanCode</title>
 
     <!-- Favicons-->
-    <link rel="icon" href="images/favicon/favicon-32x32.png" sizes="32x32">
-    <!-- Favicons-->
-    <link rel="apple-touch-icon-precomposed" href="images/favicon/apple-touch-icon-152x152.png">
-    <!-- For iPhone -->
-    <meta name="msapplication-TileColor" content="#00bcd4">
-    <meta name="msapplication-TileImage" content="images/favicon/mstile-144x144.png">
+    <link rel="icon" href="images/brand_logo.png">
     <!-- For Windows Phone -->
 
 
   <!-- CORE CSS-->
-  
   <link href="css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection">
   <link href="css/style.min.css" type="text/css" rel="stylesheet" media="screen,projection">
-    <!-- Custome CSS-->    
-    <link href="css/custom/custom.min.css" type="text/css" rel="stylesheet" media="screen,projection">
+  
+  <!-- Custome CSS-->    
+  <link href="css/custom/custom.min.css" type="text/css" rel="stylesheet" media="screen,projection">
+  <link href="css/plugins/media-hover-effects.css" type="text/css" rel="stylesheet" media="screen,projection">
 
 
   <!-- INCLUDED PLUGIN CSS ON THIS PAGE -->
   <link href="js/plugins/prism/prism.css" type="text/css" rel="stylesheet" media="screen,projection">
   <link href="js/plugins/perfect-scrollbar/perfect-scrollbar.css" type="text/css" rel="stylesheet" media="screen,projection">
-  
+  <link href="js/plugins/chartist-js/chartist.min.css" type="text/css" rel="stylesheet" media="screen,projection">
   <link href="js/plugins/magnific-popup/magnific-popup.css" type="text/css" rel="stylesheet" media="screen,projection">
   
 </head>
@@ -84,9 +79,39 @@
     <div class="wrapper">
 
       <!-- START LEFT SIDEBAR NAV-->
-      <aside id="left-nav">
-            
-            </aside>
+      <aside id="left-sidebar-nav">
+                <ul id="slide-out" class="side-nav fixed leftside-navigation">
+                <li class="user-details cyan darken-2">
+                <div class="row">
+                    <div class="col col s4 m4 l4">
+                        <img src="" alt="" class="circle responsive-img valign profile-image" id="userImage">
+                    </div>
+                    <div class="col col s8 m8 l8">
+                        <ul id="profile-dropdown" class="dropdown-content">
+                            <li><a href="profile.html"><i class="mdi-action-face-unlock"></i> Profile</a>
+                            </li>
+                            <li><a href="settings.html"><i class="mdi-action-settings"></i> Settings</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li><a href="logout.html"><i class="mdi-hardware-keyboard-tab"></i> Logout</a>
+                            </li>
+                        </ul>
+                        <a class="btn-flat dropdown-button waves-effect waves-light white-text profile-btn" href="#" data-activates="profile-dropdown"><span id="user_name"></span><i class="mdi-navigation-arrow-drop-down right"></i></a>
+                        <p class="user-roal" id="user_role"></p>
+                    </div>
+                </div>
+                </li>
+                <li class="bold active"><a href="dashboard.html" class="waves-effect waves-cyan"><i class="mdi-action-dashboard"></i> Dashboard</a>
+                </li>
+                <li class="bold"><a href="food-order.html" class="waves-effect waves-cyan"><i class="mdi-maps-local-restaurant"></i> Food Order </a>
+                </li>
+                <li class="bold"><a href="employees.html" class="waves-effect waves-cyan"><i class="mdi-social-people"></i> Employees</a>
+                </li>
+                <li class="bold"><a href="media.html" class="waves-effect waves-cyan"><i class="mdi-social-people"></i> Media</a>
+                </li>
+            </ul>
+                <a href="#" data-activates="slide-out" class="sidebar-collapse btn-floating btn-medium waves-effect waves-light hide-on-large-only cyan"><i class="mdi-navigation-menu"></i></a>
+      </aside>
       <!-- END LEFT SIDEBAR NAV-->
 
       <!-- //////////////////////////////////////////////////////////////////////////// -->
@@ -95,14 +120,7 @@
       <section id="content">
         
         <!--breadcrumbs start-->
-        <div id="breadcrumbs-wrapper">
-            <!-- Search for small screen -->
-            <div class="header-search-wrapper grey hide-on-large-only">
-                <i class="mdi-action-search active"></i>
-                <input type="text" name="Search" class="header-search-input z-depth-2" placeholder="Explore Materialize">
-            </div>
-          
-        </div>
+        
         <!--breadcrumbs end-->
         
 
@@ -110,73 +128,16 @@
         <div class="container">
           <div class="section">
 
-            <p class="caption">Fun Tuesday : 14-06-2016</p>
+            <p class="caption">WeKanCode Gallery</p>
               <div class="divider"></div>
-
-              <div class="masonry-gallery-wrapper">                
-                <div class="popup-gallery">
-                  <div class="gallary-sizer"></div>
-                  <div class="gallary-item"><a href="images/gallary/1.jpg" title="The Cleaner"><img src="images/gallary/1.jpg"></a></div>
-                  <div class="gallary-item"><a href="images/gallary/2.jpg" title="Winter Dance"><img src="images/gallary/2.jpg"></a></div>
-                  <div class="gallary-item"><a href="images/gallary/3.jpg" title="The Uninvited Guest"><img src="images/gallary/3.jpg"></a></div>
-                  <div class="gallary-item"><a href="images/gallary/4.jpg" title="Oh no, not again!"><img src="images/gallary/4.jpg"></a></div>
-                  <div class="gallary-item"><a href="images/gallary/5.jpg" title="Swan Lake"><img src="images/gallary/5.jpg"></a></div>
-                  <div class="gallary-item"><a href="images/gallary/6.jpg" title="The Shake"><img src="images/gallary/6.jpg"></a></div>
-                  <div class="gallary-item"><a href="images/gallary/7.jpg" title="Who's that, mommy?"><img src="images/gallary/7.jpg"></a></div>
-                  <div class="gallary-item"><a href="images/gallary/8.jpg" title="Who's that, mommy?"><img src="images/gallary/8.jpg"></a></div>
-                </div>
-              </div>
+              <span id="medialist"></span>
+            
+      
           </div>
           <!-- Floating Action Button -->
-            <div class="fixed-action-btn" style="bottom: 50px; right: 19px;">
-                <a class="btn-floating btn-large">
-                  <i class="mdi-action-stars"></i>
-                </a>
-                <ul>
-                  <li><a href="css-helpers.html" class="btn-floating red"><i class="large mdi-communication-live-help"></i></a></li>
-                  <li><a href="app-widget.html" class="btn-floating yellow darken-1"><i class="large mdi-device-now-widgets"></i></a></li>
-                  <li><a href="app-calendar.html" class="btn-floating green"><i class="large mdi-editor-insert-invitation"></i></a></li>
-                  <li><a href="app-email.html" class="btn-floating blue"><i class="large mdi-communication-email"></i></a></li>
-                </ul>
-            </div>
+            <span id="float_action"></span>
             <!-- Floating Action Button -->
         </div>
-
-        <div class="container">
-          <div class="section">
-
-            <p class="caption">Company Outing to Resort : 02-04-2016</p>
-              <div class="divider"></div>
-
-              <div class="masonry-gallery-wrapper">                
-                <div class="popup-gallery">
-                  <div class="gallary-sizer"></div>
-                  <div class="gallary-item"><a href="images/gallary/1.jpg" title="The Cleaner"><img src="images/gallary/1.jpg"></a></div>
-                  <div class="gallary-item"><a href="images/gallary/2.jpg" title="Winter Dance"><img src="images/gallary/2.jpg"></a></div>
-                  <div class="gallary-item"><a href="images/gallary/3.jpg" title="The Uninvited Guest"><img src="images/gallary/3.jpg"></a></div>
-                  <div class="gallary-item"><a href="images/gallary/4.jpg" title="Oh no, not again!"><img src="images/gallary/4.jpg"></a></div>
-                  <div class="gallary-item"><a href="images/gallary/5.jpg" title="Swan Lake"><img src="images/gallary/5.jpg"></a></div>
-                  <div class="gallary-item"><a href="images/gallary/6.jpg" title="The Shake"><img src="images/gallary/6.jpg"></a></div>
-                  <div class="gallary-item"><a href="images/gallary/7.jpg" title="Who's that, mommy?"><img src="images/gallary/7.jpg"></a></div>
-                  <div class="gallary-item"><a href="images/gallary/8.jpg" title="Who's that, mommy?"><img src="images/gallary/8.jpg"></a></div>
-                </div>
-              </div>
-          </div>
-          <!-- Floating Action Button -->
-            <div class="fixed-action-btn" style="bottom: 50px; right: 19px;">
-                <a class="btn-floating btn-large">
-                  <i class="mdi-action-stars"></i>
-                </a>
-                <ul>
-                  <li><a href="css-helpers.html" class="btn-floating red"><i class="large mdi-communication-live-help"></i></a></li>
-                  <li><a href="app-widget.html" class="btn-floating yellow darken-1"><i class="large mdi-device-now-widgets"></i></a></li>
-                  <li><a href="app-calendar.html" class="btn-floating green"><i class="large mdi-editor-insert-invitation"></i></a></li>
-                  <li><a href="app-email.html" class="btn-floating blue"><i class="large mdi-communication-email"></i></a></li>
-                </ul>
-            </div>
-            <!-- Floating Action Button -->
-        </div>
-
         <!--end container-->
       </section>
       <!-- END CONTENT -->
@@ -210,6 +171,8 @@
     <script type="text/javascript" src="js/plugins/jquery-1.11.2.min.js"></script>  
     <script type="text/javascript" src="js/custom.js"></script>
     <script type="text/javascript" src="js/activity/sync.js"></script>  
+    <script type="text/javascript" src="js/activity/media.js"></script>  
+    
     <!--materialize js-->
     <script type="text/javascript" src="js/materialize.min.js"></script>
     <!--prism-->
@@ -217,19 +180,14 @@
     <!--scrollbar-->
     <script type="text/javascript" src="js/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
     <!-- chartist -->
-    
-
+    <script type="text/javascript" src="js/plugins/magnific-popup/jquery.magnific-popup.min.js"></script>   
     <!-- masonry -->
     <script src="js/plugins/masonry.pkgd.min.js"></script>
     <!-- imagesloaded -->
     <script src="js/plugins/imagesloaded.pkgd.min.js"></script>    
-    <!-- magnific-popup -->
-    <script type="text/javascript" src="js/plugins/magnific-popup/jquery.magnific-popup.min.js"></script>   
     
     <!--plugins.js - Some Specific JS codes for Plugin Settings-->
     <script type="text/javascript" src="js/plugins.min.js"></script>
-    <!--custom.js - Add your own theme custom JS-->
-    
 
     <script type="text/javascript">
       /*
@@ -274,5 +232,5 @@
 </body>
 
 
-<!-- Mirrored from demo.geekslabs.com/materialize/v3.1/media-gallary-page.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 12 Jun 2016 13:00:52 GMT -->
+
 </html>

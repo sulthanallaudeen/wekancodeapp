@@ -8,6 +8,14 @@ var appPath = localStorage.getItem("appPath");
 //Initate Function Calling
 checklogin();
 
+var monthNames = ["January", "February", "March", "April", "May", "June",
+  "July", "August", "September", "October", "November", "December"
+];
+var d = new Date();
+var strDate = d.getDate()+' '+(monthNames[d.getMonth()])+', '+d.getFullYear();
+$("#P1980604345").val(strDate);
+
+
 
 $("#orderfood").click(function(){
 	orderfood();
@@ -30,6 +38,11 @@ function checklogin()
 		$("#user_role").html(user_designation)
 	}	
 }
+			
+			var $input = $('#P1980604345')
+			$input.on("change", function () {
+			$(".picker__close").click()
+            });
 
 function orderfood()
 {

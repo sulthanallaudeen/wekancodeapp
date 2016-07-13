@@ -5,19 +5,13 @@
         <param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin" />
         <param name="onload" value="true" />
     </feature>
-    <feature name="PushPlugin">
-        <param name="android-package" value="com.plugin.gcm.PushPlugin" />
-    </feature>
-    <feature name="InAppBrowser">
-        <param name="android-package" value="org.apache.cordova.inappbrowser.InAppBrowser" />
-    </feature>
     <allow-intent href="market:*" />
     <name>WeKanCode</name>
     <description>
-        A sample Apache Cordova application that responds to the deviceready event.
+        WeKancode Application
     </description>
-    <author email="sulthan.a@wekancode.com" href="http://wekancode.com">
-        WeKanCode
+    <author email="dev@cordova.apache.org" href="http://WeKancode.com">
+        WeKanCode Application
     </author>
     <icon src="www/images/logo.png" />
     <content src="index.html" />

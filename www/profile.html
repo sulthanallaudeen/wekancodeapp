@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!--================================================================================
+<!--
+================================================================================
   Project : Wekancode Mobile App
-  Version : 1.0
+  Version : 1.1
   Author  : Sutlhan Alaludeen
   Author URL: http://www.sulthanallaudeen.com
-================================================================================ -->
-
-
-
+================================================================================
+-->
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
@@ -20,38 +19,32 @@
     <title>WekanCode</title>
 
     <!-- Favicons-->
-    <link rel="icon" href="images/favicon/favicon-32x32.png" sizes="32x32">
-    <!-- Favicons-->
-    <link rel="apple-touch-icon-precomposed" href="images/favicon/apple-touch-icon-152x152.png">
-    <!-- For iPhone -->
-    <meta name="msapplication-TileColor" content="#00bcd4">
-    <meta name="msapplication-TileImage" content="images/favicon/mstile-144x144.png">
+    <link rel="icon" href="images/brand_logo.png">
     <!-- For Windows Phone -->
 
 
-  <!-- CORE CSS-->
-  
-  <link href="css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection">
-  <link href="css/style.min.css" type="text/css" rel="stylesheet" media="screen,projection">
-  <!-- Custome CSS-->    
-  <link href="css/custom/custom.min.css" type="text/css" rel="stylesheet" media="screen,projection">
+    <!-- CORE CSS-->    
+    <link href="css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection">
+    <link href="css/style.min.css" type="text/css" rel="stylesheet" media="screen,projection">
+    <!-- Custome CSS-->    
+    <link href="css/custom/custom.min.css" type="text/css" rel="stylesheet" media="screen,projection">
+
+    <link href="js/plugins/sweetalert/sweetalert.css" type="text/css" rel="stylesheet" media="screen,projection">
+    <!-- INCLUDED PLUGIN CSS ON THIS PAGE -->
+    <link href="js/plugins/perfect-scrollbar/perfect-scrollbar.css" type="text/css" rel="stylesheet" media="screen,projection">
 
 
-  <!-- INCLUDED PLUGIN CSS ON THIS PAGE -->
-  <link href="js/plugins/prism/prism.css" type="text/css" rel="stylesheet" media="screen,projection">
-  <link href="js/plugins/perfect-scrollbar/perfect-scrollbar.css" type="text/css" rel="stylesheet" media="screen,projection">
-  
 </head>
 
 <body>
-  <!-- Start Page Loading -->
-  
-  <!-- End Page Loading -->
+    <!-- Start Page Loading -->
+    
+    <!-- End Page Loading -->
 
-  <!-- //////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////// -->
 
-  <!-- START HEADER -->
-  <header id="header" class="page-topbar">
+    <!-- START HEADER -->
+    <header id="header" class="page-topbar">
         <!-- start header nav-->
         <div class="navbar-fixed">
             <nav class="navbar-color">
@@ -72,186 +65,422 @@
         </div>
         <!-- end header nav-->
     </header>
-  <!-- END HEADER -->
+    <!-- END HEADER -->
 
-  <!-- //////////////////////////////////////////////////////////////////////////// -->
+    <!-- //////////////////////////////////////////////////////////////////////////// -->
 
-  <!-- START MAIN -->
-  <div id="main">
-    <!-- START WRAPPER -->
-    <div class="wrapper">
+    <!-- START MAIN -->
+    <div id="main">
+        <!-- START WRAPPER -->
+        <div class="wrapper">
 
-      <!-- START LEFT SIDEBAR NAV-->
-      <aside id="left-nav">
-        
+            <!-- START LEFT SIDEBAR NAV-->
+            <aside id="left-sidebar-nav">
+                <ul id="slide-out" class="side-nav fixed leftside-navigation">
+                <li class="user-details cyan darken-2">
+                <div class="row">
+                    <div class="col col s4 m4 l4">
+                        <img src="" alt="" class="circle responsive-img valign profile-image" id="userImage">
+                    </div>
+                    <div class="col col s8 m8 l8">
+                        <ul id="profile-dropdown" class="dropdown-content">
+                            <li><a href="profile.html"><i class="mdi-action-face-unlock"></i> Profile</a>
+                            </li>
+                            <li><a href="settings.html"><i class="mdi-action-settings"></i> Settings</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li><a href="logout.html"><i class="mdi-hardware-keyboard-tab"></i> Logout</a>
+                            </li>
+                        </ul>
+                        <a class="btn-flat dropdown-button waves-effect waves-light white-text profile-btn" href="#" data-activates="profile-dropdown"><span id="user_name"></span><i class="mdi-navigation-arrow-drop-down right"></i></a>
+                        <p class="user-roal" id="user_role"></p>
+                    </div>
+                </div>
+                </li>
+                <li class="bold active"><a href="dashboard.html" class="waves-effect waves-cyan"><i class="mdi-action-dashboard"></i> Dashboard</a>
+                </li>
+                <li class="bold"><a href="food-order.html" class="waves-effect waves-cyan"><i class="mdi-maps-local-restaurant"></i> Food Order </a>
+                </li>
+                <li class="bold"><a href="employees.html" class="waves-effect waves-cyan"><i class="mdi-social-people"></i> Employees</a>
+                </li>
+                <li class="bold"><a href="media.html" class="waves-effect waves-cyan"><i class="mdi-social-people"></i> Media</a>
+                </li>
+            </ul>
+                <a href="#" data-activates="slide-out" class="sidebar-collapse btn-floating btn-medium waves-effect waves-light hide-on-large-only cyan"><i class="mdi-navigation-menu"></i></a>
             </aside>
-      <!-- END LEFT SIDEBAR NAV-->
+            <!-- END LEFT SIDEBAR NAV-->
 
-      <!-- //////////////////////////////////////////////////////////////////////////// -->
+            <!-- //////////////////////////////////////////////////////////////////////////// -->
 
-      <!-- START CONTENT -->
-      <section id="content">
-        
-        <!--breadcrumbs start-->
-        
-        <!--breadcrumbs end-->
-        
+            <!-- START CONTENT -->
+            <section id="content">
 
-        <!--start container-->
-        <div class="container">
-          <div class="section">
-            <!-- start blog list -->
-            <div id="blog-posts" class="row">
-                <div class="blog-sizer"></div>
+                <!--start container-->
+                <div class="container">
 
-                <div class="blog">
-                    <div class="card">
-                        <div class="card-image waves-effect waves-block waves-light">
-                            <a href="#"><img src="images/team/sathya.jpg" alt="blog-img">
-                            </a>
-                        </div>
-                        <ul class="card-action-buttons">
-                                                     
-                            <li><a class="btn-floating waves-effect waves-light light-blue"><i class="mdi-action-info activator"></i></a>
-                            </li>
-                        </ul>
-                        <div class="card-content">
-                            <p class="row">
-                              <span class="left"><a href="#">Co-Founder</a></span>
-                              <span class="right">18th June, 2015</span>
-                            </p>
-                            <h4 class="card-title grey-text text-darken-4"><a href="#" class="grey-text text-darken-4">Sathyanarayanaa Nellore Sampat</a>
-                            
-                                        <p><i class="mdi-action-perm-phone-msg cyan-text text-darken-2"></i> +1 (612) 222 8989</p>
-                                        <p><i class="mdi-communication-email cyan-text text-darken-2"></i> mail@domain.com</p>
-                            </h4>
-                            
-                            
-                        </div>
-                        <div class="card-reveal">
-                            <span class="card-title grey-text text-darken-4"><i class="mdi-navigation-close right"></i> <b>Sathyanarayanaa Nellore Sampat</b></span>
-                            <p>
-                            	
-                            	Sathya is an Indian entrepreneur and a technology enthusiast with a strong business acumen. He has previously worked at SonyATV, SiriusXM, ISRO to name a few big organizations. He is passionate about building new products that can help solve real life problems. He is one of the co-founders of WeKanCode.
-							<br>
-							He graduated from New York University with a master’s in management and systems and has a bachelor’s in computer science from College of Engineering, India.
+                    <!--chart dashboard start-->
+                    
+                    <!--chart dashboard end-->
 
-                            </p>
-                        </div>
-                    </div>
-                </div>
+                    <!-- //////////////////////////////////////////////////////////////////////////// -->
 
-                <div class="blog">
-                    <div class="card">
-                        <div class="card-image waves-effect waves-block waves-light">
-                            <a href="#"><img src="images/team/pablo.jpg" alt="blog-img">
-                            </a>
-                        </div>
-                        <ul class="card-action-buttons">
-                                                     
-                            <li><a class="btn-floating waves-effect waves-light light-blue"><i class="mdi-action-info activator"></i></a>
-                            </li>
-                        </ul>
-                        <div class="card-content">
-                            <p class="row">
-                              <span class="left"><a href="#">Co-Founder</a></span>
-                              <span class="right">18th June, 2015</span>
-                            </p>
-                            <h4 class="card-title grey-text text-darken-4"><a href="#" class="grey-text text-darken-4">Pablo Jimenez Godoy</a>
-                            </h4>
-                            
-                            
-                        </div>
-                        <div class="card-reveal">
-                            <span class="card-title grey-text text-darken-4"><i class="mdi-navigation-close right"></i> <b>Pablo Jimenez Godoy</b></span>
-                            <p>
-                            	Pablo is a Venezuelan tech entrepreneur with strong back-ground in business and finance.He co-founded his firststartup, a biometric payments solutions provider, during his undergrad studies at Ecole Superieure du Commerce Exterieurin Paris.
-							<br>
-							He has a bachelor’s and master’s degree in business and finance. After two short experiences in M&A advisory , he receded the financial services industry in order to focus on technology and eventually co-founded WeKanCode.
-
-                            </p>
+                    <!--card stats start-->
+                    <div id="card-stats" style="display:none">
+                        <div class="row">
+                            <div class="col s12 m6 l3">
+                                <div class="card">
+                                    <div class="card-content  green white-text">
+                                        <p class="card-stats-title"><i class="mdi-social-group-add"></i> New Clients</p>
+                                        <h4 class="card-stats-number">566</h4>
+                                        <p class="card-stats-compare"><i class="mdi-hardware-keyboard-arrow-up"></i> 15% <span class="green-text text-lighten-5">from yesterday</span>
+                                        </p>
+                                    </div>
+                                    <div class="card-action  green darken-2">
+                                        <div id="clients-bar" class="center-align"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col s12 m6 l3">
+                                <div class="card">
+                                    <div class="card-content pink lighten-1 white-text">
+                                        <p class="card-stats-title"><i class="mdi-editor-insert-drive-file"></i> New Invoice</p>
+                                        <h4 class="card-stats-number">1806</h4>
+                                        <p class="card-stats-compare"><i class="mdi-hardware-keyboard-arrow-down"></i> 3% <span class="deep-purple-text text-lighten-5">from last month</span>
+                                        </p>
+                                    </div>
+                                    <div class="card-action  pink darken-2">
+                                        <div id="invoice-line" class="center-align"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col s12 m6 l3">
+                                <div class="card">
+                                    <div class="card-content blue-grey white-text">
+                                        <p class="card-stats-title"><i class="mdi-action-trending-up"></i> Today Profit</p>
+                                        <h4 class="card-stats-number">$806.52</h4>
+                                        <p class="card-stats-compare"><i class="mdi-hardware-keyboard-arrow-up"></i> 80% <span class="blue-grey-text text-lighten-5">from yesterday</span>
+                                        </p>
+                                    </div>
+                                    <div class="card-action blue-grey darken-2">
+                                        <div id="profit-tristate" class="center-align"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col s12 m6 l3">
+                                <div class="card">
+                                    <div class="card-content purple white-text">
+                                        <p class="card-stats-title"><i class="mdi-editor-attach-money"></i>Total Sales</p>
+                                        <h4 class="card-stats-number">$8990.63</h4>
+                                        <p class="card-stats-compare"><i class="mdi-hardware-keyboard-arrow-up"></i> 70% <span class="purple-text text-lighten-5">last month</span>
+                                        </p>
+                                    </div>
+                                    <div class="card-action purple darken-2">
+                                        <div id="sales-compositebar" class="center-align"></div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
+                    <!--card stats end-->
 
+                    <!-- //////////////////////////////////////////////////////////////////////////// -->
 
+                    <!--card widgets start-->
+                    <div id="card-widgets">
+                        <div class="row">
 
-                <div class="blog">
-                    <div class="card">
-                        <div class="card-image waves-effect waves-block waves-light">
-                            <a href="#"><img src="images/team/pablo.jpg" alt="blog-img">
-                            </a>
-                        </div>
-                        <ul class="card-action-buttons">
-                                                     
-                            <li><a class="btn-floating waves-effect waves-light light-blue"><i class="mdi-action-info activator"></i></a>
-                            </li>
-                        </ul>
-                        <div class="card-content">
-                            <p class="row">
-                              <span class="left"><a href="#">CTO</a></span>
-                              <span class="right">18th June, 2015</span>
-                            </p>
-                            <h4 class="card-title grey-text text-darken-4"><a href="#" class="grey-text text-darken-4">Ranjan Moses</a>
-                            </h4>
+                            <div class="col s12 m12 l4" style="display:none">
+                                <ul id="task-card" class="collection with-header">
+                                    <li class="collection-header cyan">
+                                        <h4 class="task-card-title">My Task</h4>
+                                        <p class="task-card-date">March 26, 2015</p>
+                                    </li>
+                                    <li class="collection-item dismissable">
+                                        <input type="checkbox" id="task1" />
+                                        <label for="task1">Create Mobile App UI. <a href="#" class="secondary-content"><span class="ultra-small">Today</span></a>
+                                        </label>
+                                        <span class="task-cat teal">Mobile App</span>
+                                    </li>
+                                    <li class="collection-item dismissable">
+                                        <input type="checkbox" id="task2" />
+                                        <label for="task2">Check the new API standerds. <a href="#" class="secondary-content"><span class="ultra-small">Monday</span></a>
+                                        </label>
+                                        <span class="task-cat purple">Web API</span>
+                                    </li>
+                                    <li class="collection-item dismissable">
+                                        <input type="checkbox" id="task3" checked="checked" />
+                                        <label for="task3">Check the new Mockup of ABC. <a href="#" class="secondary-content"><span class="ultra-small">Wednesday</span></a>
+                                        </label>
+                                        <span class="task-cat pink">Mockup</span>
+                                    </li>
+                                    <li class="collection-item dismissable">
+                                        <input type="checkbox" id="task4" checked="checked" disabled="disabled" />
+                                        <label for="task4">I did it !</label>
+                                        <span class="task-cat cyan">Mobile App</span>
+                                    </li>
+                                </ul>
+                            </div>
                             
                             
+
+                            <div class="col s12 m6 l4">
+                                <div id="profile-card" class="card">
+                                    <div class="card-image waves-effect waves-block waves-light">
+                                        <img class="activator" src="images/user-bg.jpg" alt="user background">
+                                    </div>
+                                    <div class="card-content">
+                                        <img src="" alt="" class="circle responsive-img activator card-profile-image userImage">
+                                        <a class="btn-floating activator btn-move-up waves-effect waves-light darken-2 right">
+                                            <i class="mdi-action-account-circle"></i>
+                                        </a>
+
+                                        <span class="card-title activator grey-text text-darken-4 dashboardUserName" ></span>
+                                        <p><i class="mdi-action-perm-identity cyan-text text-darken-2"></i> <span id="dashboardUserDesignation"></span>
+                                        </p>
+                                        <p><i class="mdi-action-perm-phone-msg cyan-text text-darken-2"></i> <span id="userTel"></span></p>
+                                        <p><i class="mdi-communication-email cyan-text text-darken-2"></i> <span id="userEmail"></span></p>
+
+                                    </div>
+                                    <div class="card-reveal">
+                                        <span class="card-title grey-text text-darken-4"><span class="dashboardUserName"></span> <i class="mdi-navigation-close right"></i></span>
+                                       <span class="profileAboutMe"></span> 
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
-                        <div class="card-reveal">
-                            <span class="card-title grey-text text-darken-4"><i class="mdi-navigation-close right"></i> <b>Ranjan Moses</b></span>
-                            <p>
-                            	Ranjan Moses
+                        <form action="http://localhost/wekancode/imageupload" method="post" enctype="multipart/form-data" id="MyUploadForm">
+<input type="hidden" name="user_id" id="user_id" value="">
+<input name="FileInput" id="FileInput" type="file" />
+<input type="submit"  id="submit-btn" value="Upload" />
+<img src="images/ajax-loader.gif" id="loading-img" style="display:none;" alt="Please Wait"/>
+</form>
+<div id="progressbox" ><div id="progressbar"></div ><div id="statustxt">	</div></div>
+<div id="output"></div>
 
 
-                            </p>
+                        <form class="col s12">
+                        <div class="row">
+                        <div class="file-field input-field">
+                      <div class="btn">
+                        <span>Profile Image</span>
+                        <input type="file" id="profile_image">
+                      </div>
+                      <div class="file-path-wrapper">
+                        <input class="file-path validate valid" type="text">
+                      </div>
+                    </div>
+                        </div>
+                       </form>
+                      <div class="row">
+                        <div class="input-field col s12">
+                          <textarea id="textarea1" class="materialize-textarea" maxlength="255"></textarea>
+                          <label for="textarea1">About Me</label>
+                        </div>
+                      </div>
+                      <button class="btn cyan waves-effect waves-light right" type="button" id="updateprofile" name="action">Update Profile
+                              
+                            </button>
+                    
+                        <br><br>
+                    <!--card widgets end-->
+
+                    <!-- //////////////////////////////////////////////////////////////////////////// -->
+
+                    <!--work collections start-->
+                    <div id="work-collections" style="display:none">
+                        <div class="row">
+                            <div class="col s12 m12 l6">
+                                <ul id="projects-collection" class="collection">
+                                    <li class="collection-item avatar">
+                                        <i class="mdi-file-folder circle light-blue darken-2"></i>
+                                        <span class="collection-header">Projects</span>
+                                        <p>Your Favorites</p>
+                                        <a href="#" class="secondary-content"><i class="mdi-action-grade"></i></a>
+                                    </li>
+                                    <li class="collection-item">
+                                        <div class="row">
+                                            <div class="col s6">
+                                                <p class="collections-title">Web App</p>
+                                                <p class="collections-content">AEC Company</p>
+                                            </div>
+                                            <div class="col s3">
+                                                <span class="task-cat cyan">Development</span>
+                                            </div>
+                                            <div class="col s3">
+                                                <div id="project-line-1"></div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="collection-item">
+                                        <div class="row">
+                                            <div class="col s6">
+                                                <p class="collections-title">Mobile App for Social</p>
+                                                <p class="collections-content">iSocial App</p>
+                                            </div>
+                                            <div class="col s3">
+                                                <span class="task-cat grey darken-3">UI/UX</span>
+                                            </div>
+                                            <div class="col s3">
+                                                <div id="project-line-2"></div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="collection-item">
+                                        <div class="row">
+                                            <div class="col s6">
+                                                <p class="collections-title">Website</p>
+                                                <p class="collections-content">MediTab</p>
+                                            </div>
+                                            <div class="col s3">
+                                                <span class="task-cat teal">Marketing</span>
+                                            </div>
+                                            <div class="col s3">
+                                                <div id="project-line-3"></div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="collection-item">
+                                        <div class="row">
+                                            <div class="col s6">
+                                                <p class="collections-title">AdWord campaign</p>
+                                                <p class="collections-content">True Line</p>
+                                            </div>
+                                            <div class="col s3">
+                                                <span class="task-cat green">SEO</span>
+                                            </div>
+                                            <div class="col s3">
+                                                <div id="project-line-4"></div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col s12 m12 l6">
+                                <ul id="issues-collection" class="collection">
+                                    <li class="collection-item avatar">
+                                        <i class="mdi-action-bug-report circle red darken-2"></i>
+                                        <span class="collection-header">Issues</span>
+                                        <p>Assigned to you</p>
+                                        <a href="#" class="secondary-content"><i class="mdi-action-grade"></i></a>
+                                    </li>
+                                    <li class="collection-item">
+                                        <div class="row">
+                                            <div class="col s7">
+                                                <p class="collections-title"><strong>#102</strong> Home Page</p>
+                                                <p class="collections-content">Web Project</p>
+                                            </div>
+                                            <div class="col s2">
+                                                <span class="task-cat pink accent-2">P1</span>
+                                            </div>
+                                            <div class="col s3">
+                                                <div class="progress">
+                                                     <div class="determinate" style="width: 70%"></div>   
+                                                </div>                                                
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="collection-item">
+                                        <div class="row">
+                                            <div class="col s7">
+                                                <p class="collections-title"><strong>#108</strong> API Fix</p>
+                                                <p class="collections-content">API Project </p>
+                                            </div>
+                                            <div class="col s2">
+                                                <span class="task-cat yellow darken-4">P2</span>
+                                            </div>
+                                            <div class="col s3">
+                                                <div class="progress">
+                                                    <div class="determinate" style="width: 40%"></div>   
+                                                </div>                                                
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="collection-item">
+                                        <div class="row">
+                                            <div class="col s7">
+                                                <p class="collections-title"><strong>#205</strong> Profile page css</p>
+                                                <p class="collections-content">New Project </p>
+                                            </div>
+                                            <div class="col s2">                                                
+                                                <span class="task-cat light-green darken-3">P3</span>
+                                            </div>
+                                            <div class="col s3">
+                                                <div class="progress">
+                                                    <div class="determinate" style="width: 95%"></div>   
+                                                </div>                                                
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="collection-item">
+                                        <div class="row">
+                                            <div class="col s7">
+                                                <p class="collections-title"><strong>#188</strong> SAP Changes</p>
+                                                <p class="collections-content">SAP Project</p>
+                                            </div>
+                                            <div class="col s2">
+                                                <span class="task-cat pink accent-2">P1</span>
+                                            </div>
+                                            <div class="col s3">
+                                                <div class="progress">
+                                                     <div class="determinate" style="width: 10%"></div>   
+                                                </div>                                                
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
+                    <!--work collections end-->
+
+                    <!-- Floating Action Button -->
+                    <span id="float_action"></span>
+                    <!-- Floating Action Button -->
+
                 </div>
+                <!--end container-->
+            </section>
+            <!-- END CONTENT -->
 
-                
+            <!-- //////////////////////////////////////////////////////////////////////////// -->
+            
 
-               
-
-            </div>
-            <!--/ end blog list -->
-          </div>
-          <!-- Floating Action Button -->
-            <div class="fixed-action-btn" style="bottom: 50px; right: 19px;">
-                <a class="btn-floating btn-large">
-                  <i class="mdi-action-stars"></i>
-                </a>
-                <ul>
-                  <li><a href="css-helpers.html" class="btn-floating red"><i class="large mdi-communication-live-help"></i></a></li>
-                  <li><a href="app-widget.html" class="btn-floating yellow darken-1"><i class="large mdi-device-now-widgets"></i></a></li>
-                  <li><a href="app-calendar.html" class="btn-floating green"><i class="large mdi-editor-insert-invitation"></i></a></li>
-                  <li><a href="app-email.html" class="btn-floating blue"><i class="large mdi-communication-email"></i></a></li>
-                </ul>
-            </div>
-            <!-- Floating Action Button -->
         </div>
-        <!--end container-->
-      </section>
-      <!-- END CONTENT -->
-
-      <!-- //////////////////////////////////////////////////////////////////////////// -->
-      <!-- START RIGHT SIDEBAR NAV-->
-      
-      <!-- LEFT RIGHT SIDEBAR NAV-->
+        <!-- END WRAPPER -->
 
     </div>
-    <!-- END WRAPPER -->
-
-  </div>
-  <!-- END MAIN -->
+    <!-- END MAIN -->
 
 
+    <style>
+    #header
+    {
 
-  <!-- //////////////////////////////////////////////////////////////////////////// -->
+    }
+   /* .fg_wid_header
+    {
+        display: none;
+    }
+    .fg_wid_footer a{
+        display: none;
+    }
+    .fg_title
+    {
+        color: rgba(0, 0, 0, 0.87);
+    }
+    .fg_wid_footer:before {
+      content: "Click on the link to read full news";
+      margin: 0px 0px 0px 97px;
+    }
+    .fg_wid_footer
+    {
+        background-color:white;
+    }*/
+    </style>
+    <!-- //////////////////////////////////////////////////////////////////////////// -->
 
-  <!-- START FOOTER -->
-  
-  <!-- END FOOTER -->
-
+    
 
 
     <!-- ================================================
@@ -259,41 +488,132 @@
     ================================================ -->
     
     <!-- jQuery Library -->
-    <script type="text/javascript" src="js/plugins/jquery-1.11.2.min.js"></script>  
-    <script type="text/javascript" src="js/custom.js"></script>
-    <script type="text/javascript" src="js/activity/sync.js"></script>  
-    <!--materialize js-->
+    <script type="text/javascript" src="js/plugins/jquery-1.11.2.min.js"></script>    
     <script type="text/javascript" src="js/materialize.min.js"></script>
-    <!--prism-->
-    <script type="text/javascript" src="js/plugins/prism/prism.js"></script>
-    <!--scrollbar-->
+    <script type="text/javascript" src="js/plugins/jquery.form.min.js"></script>
+
+    <script type="text/javascript" src="js/custom.js"></script>
+    <script type="text/javascript" src="js/activity/sync.js"></script>
+    <script type="text/javascript" src="js/activity/updatedata.js"></script>
+    <script type="text/javascript" src="js/activity/updateprofile.js"></script>
+    
+    <script type="text/javascript" src="js/plugins/sweetalert/sweetalert.min.js"></script>   
+
     <script type="text/javascript" src="js/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
-    <!-- chartist -->
-    
-    <!-- masonry -->
-    <script src="js/plugins/masonry.pkgd.min.js"></script>
-    <!-- imagesloaded -->
-    <script src="js/plugins/imagesloaded.pkgd.min.js"></script>    
-    
-    <!--plugins.js - Some Specific JS codes for Plugin Settings-->
     <script type="text/javascript" src="js/plugins.min.js"></script>
-    <!--custom.js - Add your own theme custom JS-->
+
+    
     
     <script type="text/javascript">
-    /*
-     * Masonry container for blog page
-     */
-    var $containerBlog = $("#blog-posts");
-    $containerBlog.imagesLoaded(function() {
-      $containerBlog.masonry({
-        itemSelector: ".blog",
-        columnWidth: ".blog-sizer",
-      });
-    });
-    </script>
+$(document).ready(function() { 
+    var options = { 
+            target:   '#output',   // target element(s) to be updated with server response 
+            beforeSubmit:  beforeSubmit,  // pre-submit callback 
+            success:       afterSuccess,  // post-submit callback 
+            uploadProgress: OnProgress, //upload progress callback 
+            resetForm: true        // reset the form after successful submit 
+        }; 
+        
+     $('#MyUploadForm').submit(function() { 
+            $(this).ajaxSubmit(options);            
+            // always return false to prevent standard browser submit and page navigation 
+            return false; 
+        }); 
+        
+
+//function after succesful file upload (when server response)
+function afterSuccess()
+{
+    $('#submit-btn').show(); //hide submit button
+    $('#loading-img').hide(); //hide submit button
+    $('#progressbox').delay( 1000 ).fadeOut(); //hide progress bar
+
+}
+
+//function to check file size before uploading.
+function beforeSubmit(){
+    //check whether browser fully supports all File API
+   if (window.File && window.FileReader && window.FileList && window.Blob)
+    {
+        
+        if( !$('#FileInput').val()) //check empty input filed
+        {
+            $("#output").html("Are you kidding me?");
+            return false
+        }
+        
+        var fsize = $('#FileInput')[0].files[0].size; //get file size
+        var ftype = $('#FileInput')[0].files[0].type; // get file type
+        
+
+        //allow file types 
+        switch(ftype)
+        {
+            case 'image/png': 
+            case 'image/gif': 
+            case 'image/jpeg': 
+            case 'image/pjpeg':
+            case 'text/plain':
+            case 'text/html':
+            case 'application/x-zip-compressed':
+            case 'application/pdf':
+            case 'application/msword':
+            case 'application/vnd.ms-excel':
+            case 'video/mp4':
+                break;
+            default:
+                $("#output").html("<b>"+ftype+"</b> Unsupported file type!");
+                return false
+        }
+        
+        //Allowed file size is less than 5 MB (1048576)
+        if(fsize>5242880) 
+        {
+            $("#output").html("<b>"+bytesToSize(fsize) +"</b> Too big file! <br />File is too big, it should be less than 5 MB.");
+            return false
+        }
+                
+        $('#submit-btn').hide(); //hide submit button
+        $('#loading-img').show(); //hide submit button
+        $("#output").html("");  
+    }
+    else
+    {
+        //Output error to older unsupported browsers that doesn't support HTML5 File API
+        $("#output").html("Please upgrade your browser, because your current browser lacks some new features we need!");
+        return false;
+    }
+}
+
+//progress bar function
+function OnProgress(event, position, total, percentComplete)
+{
+    //Progress bar
+    $('#progressbox').show();
+    $('#progressbar').width(percentComplete + '%') //update progressbar percent complete
+    $('#statustxt').html(percentComplete + '%'); //update status text
+    if(percentComplete>50)
+        {
+            $('#statustxt').css('color','#000'); //change status text to white after 50%
+        }
+}
+
+//function to format bites bit.ly/19yoIPO
+function bytesToSize(bytes) {
+   var sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB'];
+   if (bytes == 0) return '0 Bytes';
+   var i = parseInt(Math.floor(Math.log(bytes) / Math.log(1024)));
+   return Math.round(bytes / Math.pow(1024, i), 2) + ' ' + sizes[i];
+}
+
+}); 
+
+</script>
+
+    <!--custom-script.js - Add your own theme custom JS-->
     
+    <!-- Toast Notification -->
 </body>
 
 
-<!-- Mirrored from demo.geekslabs.com/materialize/v3.1/page-blog-1.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 12 Jun 2016 13:00:37 GMT -->
 </html>

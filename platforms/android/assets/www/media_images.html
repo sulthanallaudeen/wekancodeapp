@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+================================================================================
+  Project : Wekancode Mobile App
+  Version : 1.1
+  Author  : Sutlhan Alaludeen
+  Author URL: http://www.sulthanallaudeen.com
+================================================================================
+-->
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title>WekanCode</title>
+
+    <!-- Favicons-->
+    <link rel="icon" href="images/brand_logo.png">
+    <!-- For Windows Phone -->
+
+
+  <!-- CORE CSS-->
+  
+  <link href="css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection">
+  <link href="css/style.min.css" type="text/css" rel="stylesheet" media="screen,projection">
+    <!-- Custome CSS-->    
+    <link href="css/custom/custom.min.css" type="text/css" rel="stylesheet" media="screen,projection">
+
+
+  <!-- INCLUDED PLUGIN CSS ON THIS PAGE -->
+  <link href="js/plugins/prism/prism.css" type="text/css" rel="stylesheet" media="screen,projection">
+  <link href="js/plugins/perfect-scrollbar/perfect-scrollbar.css" type="text/css" rel="stylesheet" media="screen,projection">
+  
+  <link href="js/plugins/magnific-popup/magnific-popup.css" type="text/css" rel="stylesheet" media="screen,projection">
+  
+</head>
+
+<body>
+  <!-- Start Page Loading -->
+  
+  <!-- End Page Loading -->
+
+  <!-- //////////////////////////////////////////////////////////////////////////// -->
+
+  <!-- START HEADER -->
+  <header id="header" class="page-topbar">
+        <!-- start header nav-->
+        <div class="navbar-fixed">
+            <nav class="navbar-color">
+                <div class="nav-wrapper">
+                    <ul class="left">                      
+                      <li><h1 class="logo-wrapper"><a href="dashboard.html" class="brand-logo darken-1"><img src="images/materialize-logo.png" alt="materialize logo"></a> <span class="logo-text">Materialize</span></h1></li>
+                    </ul>
+                    <div class="header-search-wrapper hide-on-med-and-down">
+                        <i class="mdi-action-search"></i>
+                        <input type="text" name="Search" class="header-search-input z-depth-2" placeholder="Search"/>
+                    </div>
+                    
+                    <!-- translation-button -->
+                    
+                    <!-- notifications-dropdown -->
+                </div>
+            </nav>
+        </div>
+        <!-- end header nav-->
+    </header>
+  <!-- END HEADER -->
+
+  <!-- //////////////////////////////////////////////////////////////////////////// -->
+
+  <!-- START MAIN -->
+  <div id="main">
+    <!-- START WRAPPER -->
+    <div class="wrapper">
+
+      <!-- START LEFT SIDEBAR NAV-->
+      <aside id="left-sidebar-nav">
+                <ul id="slide-out" class="side-nav fixed leftside-navigation">
+                <li class="user-details cyan darken-2">
+                <div class="row">
+                    <div class="col col s4 m4 l4">
+                        <img src="" alt="" class="circle responsive-img valign profile-image" id="userImage">
+                    </div>
+                    <div class="col col s8 m8 l8">
+                        <ul id="profile-dropdown" class="dropdown-content">
+                            <li><a href="profile.html"><i class="mdi-action-face-unlock"></i> Profile</a>
+                            </li>
+                            <li><a href="settings.html"><i class="mdi-action-settings"></i> Settings</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li><a href="logout.html"><i class="mdi-hardware-keyboard-tab"></i> Logout</a>
+                            </li>
+                        </ul>
+                        <a class="btn-flat dropdown-button waves-effect waves-light white-text profile-btn" href="#" data-activates="profile-dropdown"><span id="user_name"></span><i class="mdi-navigation-arrow-drop-down right"></i></a>
+                        <p class="user-roal" id="user_role"></p>
+                    </div>
+                </div>
+                </li>
+                <li class="bold active"><a href="dashboard.html" class="waves-effect waves-cyan"><i class="mdi-action-dashboard"></i> Dashboard</a>
+                </li>
+                <li class="bold"><a href="food-order.html" class="waves-effect waves-cyan"><i class="mdi-maps-local-restaurant"></i> Food Order </a>
+                </li>
+                <li class="bold"><a href="employees.html" class="waves-effect waves-cyan"><i class="mdi-social-people"></i> Employees</a>
+                </li>
+                <li class="bold"><a href="media.html" class="waves-effect waves-cyan"><i class="mdi-social-people"></i> Media</a>
+                </li>
+            </ul>
+                <a href="#" data-activates="slide-out" class="sidebar-collapse btn-floating btn-medium waves-effect waves-light hide-on-large-only cyan"><i class="mdi-navigation-menu"></i></a>
+      </aside>
+      <!-- END LEFT SIDEBAR NAV-->
+
+      <!-- //////////////////////////////////////////////////////////////////////////// -->
+
+      <!-- START CONTENT -->
+      <section id="content">
+        
+        <!--breadcrumbs start-->
+        
+        <!--breadcrumbs end-->
+        
+        <div class="container">
+          <div class="section">
+            <p class="caption"><span id="media_title"></span> :</p>
+              <div class="divider"></div>
+              <div class="masonry-gallery-wrapper">                
+                <div class="popup-gallery">
+                  <div class="gallary-sizer"></div>
+                  <span id="medialist"></span>
+                  
+
+
+                  
+                </div>
+              </div>
+          </div>
+          </div>
+        
+
+
+        <span id="float_action"></span>
+        <!--end container-->
+      </section>
+      <!-- END CONTENT -->
+
+      <!-- //////////////////////////////////////////////////////////////////////////// -->
+      <!-- START RIGHT SIDEBAR NAV-->
+      
+      <!-- LEFT RIGHT SIDEBAR NAV-->
+
+    </div>
+    <!-- END WRAPPER -->
+
+  </div>
+  <!-- END MAIN -->
+
+
+
+  <!-- //////////////////////////////////////////////////////////////////////////// -->
+
+  <!-- START FOOTER -->
+  
+  <!-- END FOOTER -->
+
+
+
+    <!-- ================================================
+    Scripts
+    ================================================ -->
+    
+    <!-- jQuery Library -->
+    <script type="text/javascript" src="js/plugins/jquery-1.11.2.min.js"></script>  
+    <script type="text/javascript" src="js/custom.js"></script>
+    <script type="text/javascript" src="js/activity/sync.js"></script>  
+    <script type="text/javascript" src="js/activity/medialist.js"></script>  
+    
+    <!--materialize js-->
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <!--prism-->
+    <script type="text/javascript" src="js/plugins/prism/prism.js"></script>
+    <!--scrollbar-->
+    <script type="text/javascript" src="js/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <!-- chartist -->
+    
+
+    <!-- masonry -->
+    <script src="js/plugins/masonry.pkgd.min.js"></script>
+    <!-- imagesloaded -->
+    <script src="js/plugins/imagesloaded.pkgd.min.js"></script>    
+    <!-- magnific-popup -->
+    <script type="text/javascript" src="js/plugins/magnific-popup/jquery.magnific-popup.min.js"></script>   
+    
+    <!--plugins.js - Some Specific JS codes for Plugin Settings-->
+    <script type="text/javascript" src="js/plugins.min.js"></script>
+    
+    <!--custom.js - Add your own theme custom JS-->
+    
+
+    <script type="text/javascript">
+      /*
+       * Masonry container for Gallery page
+       */
+      
+    </script>
+    
+</body>
+
+
+<!-- Mirrored from demo.geekslabs.com/materialize/v3.1/media-gallary-page.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 12 Jun 2016 13:00:52 GMT -->
+</html>

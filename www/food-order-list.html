@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+================================================================================
+  Project : Wekancode Mobile App
+  Version : 1.1
+  Author  : Sutlhan Alaludeen
+  Author URL: http://www.sulthanallaudeen.com
+================================================================================
+-->
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title>WekanCode</title>
+
+    <!-- Favicons-->
+    <link rel="icon" href="images/brand_logo.png">
+    <!-- For Windows Phone -->
+
+
+  <!-- CORE CSS-->
+  
+  <link href="css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection">
+  <link href="css/style.min.css" type="text/css" rel="stylesheet" media="screen,projection">
+  <!-- Custome CSS-->    
+  <link href="css/custom/custom.min.css" type="text/css" rel="stylesheet" media="screen,projection">
+  
+  
+
+
+  <!-- INCLUDED PLUGIN CSS ON THIS PAGE -->
+  <link href="js/plugins/sweetalert/sweetalert.css" type="text/css" rel="stylesheet" media="screen,projection">
+  <link href="js/plugins/prism/prism.css" type="text/css" rel="stylesheet" media="screen,projection">
+  <link href="js/plugins/perfect-scrollbar/perfect-scrollbar.css" type="text/css" rel="stylesheet" media="screen,projection">
+  <link href="js/plugins/data-tables/css/jquery.dataTables.min.css" type="text/css" rel="stylesheet" media="screen,projection">
+  
+</head>
+
+<body>
+  <!-- Start Page Loading -->
+  
+  <!-- End Page Loading -->
+
+  <!-- //////////////////////////////////////////////////////////////////////////// -->
+
+  <!-- START HEADER -->
+  <header id="header" class="page-topbar">
+        <!-- start header nav-->
+        <div class="navbar-fixed">
+            <nav class="navbar-color">
+                <div class="nav-wrapper">
+                    <ul class="left">                      
+                      <li><h1 class="logo-wrapper"><a href="dashboard.html" class="brand-logo darken-1"><img src="images/materialize-logo.png" alt="materialize logo"></a> <span class="logo-text">Materialize</span></h1></li>
+                    </ul>
+                    <div class="header-search-wrapper hide-on-med-and-down">
+                        <i class="mdi-action-search"></i>
+                        <input type="text" name="Search" class="header-search-input z-depth-2" placeholder="Search"/>
+                    </div>
+                    
+                    <!-- translation-button -->
+                    
+                    <!-- notifications-dropdown -->
+                </div>
+            </nav>
+        </div>
+        <!-- end header nav-->
+    </header>
+  <!-- END HEADER -->
+
+  <!-- //////////////////////////////////////////////////////////////////////////// -->
+
+  <!-- START MAIN -->
+  <div id="main">
+    <!-- START WRAPPER -->
+    <div class="wrapper">
+
+      <!-- START LEFT SIDEBAR NAV-->
+      <aside id="left-sidebar-nav">
+                <ul id="slide-out" class="side-nav fixed leftside-navigation">
+                <li class="user-details cyan darken-2">
+                <div class="row">
+                    <div class="col col s4 m4 l4">
+                        <img src="" alt="" class="circle responsive-img valign profile-image" id="userImage">
+                    </div>
+                    <div class="col col s8 m8 l8">
+                        <ul id="profile-dropdown" class="dropdown-content">
+                            <li><a href="profile.html"><i class="mdi-action-face-unlock"></i> Profile</a>
+                            </li>
+                            <li><a href="settings.html"><i class="mdi-action-settings"></i> Settings</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li><a href="logout.html"><i class="mdi-hardware-keyboard-tab"></i> Logout</a>
+                            </li>
+                        </ul>
+                        <a class="btn-flat dropdown-button waves-effect waves-light white-text profile-btn" href="#" data-activates="profile-dropdown"><span id="user_name"></span><i class="mdi-navigation-arrow-drop-down right"></i></a>
+                        <p class="user-roal" id="user_role"></p>
+                    </div>
+                </div>
+                </li>
+                <li class="bold active"><a href="dashboard.html" class="waves-effect waves-cyan"><i class="mdi-action-dashboard"></i> Dashboard</a>
+                </li>
+                <li class="bold"><a href="food-order.html" class="waves-effect waves-cyan"><i class="mdi-maps-local-restaurant"></i> Food Order </a>
+                </li>
+                <li class="bold"><a href="employees.html" class="waves-effect waves-cyan"><i class="mdi-social-people"></i> Employees</a>
+                </li>
+                <li class="bold"><a href="media.html" class="waves-effect waves-cyan"><i class="mdi-social-people"></i> Media</a>
+                </li>
+            </ul>
+                <a href="#" data-activates="slide-out" class="sidebar-collapse btn-floating btn-medium waves-effect waves-light hide-on-large-only cyan"><i class="mdi-navigation-menu"></i></a>
+            </aside>
+      <!-- END LEFT SIDEBAR NAV-->
+
+      <!-- //////////////////////////////////////////////////////////////////////////// -->
+
+      <!-- START CONTENT -->
+      <section id="content">
+        
+        <!--breadcrumbs start-->
+        
+        <!--breadcrumbs end-->
+        
+
+        <!--start container-->
+        <div class="container">
+          <div class="section">
+
+            
+            
+            <!--DataTables example-->
+            <div id="table-datatables">
+
+            <a href="food-order.html" class="btn cyan waves-effect waves-light right" style="float:right">
+    <i class="mdi-hardware-keyboard-backspace"></i>
+    Back to Food Order
+</a>
+
+
+            
+              <h4 class="header">Food Order History</h4>
+              
+
+
+              <div class="row">
+
+                <div>
+              
+                    <div class="row">
+                        
+                        <div class=" col s12" style="width:25%">
+                        
+                          <input type="text" class="datepicker picker__input" readonly="" id="P1980604345" tabindex="-1" aria-haspopup="true" aria-expanded="false" aria-readonly="false" aria-owns="P1980604345_root" placeholder="Date">
+                              </div>
+                        </div>
+                </div>
+
+                <div class="col s12 m12 l12">
+                  
+
+                  <div class="col s12 m8 l9">
+                  <table id="myTable">
+                    <thead>
+                      <tr>
+                        <th >Name</th>
+                        <th >Food Type</th>
+                        <th >Action</th>
+                      </tr>
+                    </thead>
+
+                    <tbody>
+                    </tbody>
+                  </table>
+                </div>
+
+                  
+
+                  
+                </div>
+              </div>
+            </div> 
+            <br>
+            <div class="divider"></div> 
+            <!--DataTables example Row grouping-->
+            
+
+
+           
+          </div>
+          <!-- Floating Action Button -->
+            <span id="float_action"></span>
+            <!-- Floating Action Button -->
+        </div>
+        <!--end container-->
+
+      </section>
+      <!-- END CONTENT -->
+
+      <!-- //////////////////////////////////////////////////////////////////////////// -->
+      <!-- START RIGHT SIDEBAR NAV-->
+      
+      <!-- LEFT RIGHT SIDEBAR NAV-->
+
+    </div>
+    <!-- END WRAPPER -->
+
+  </div>
+  <!-- END MAIN -->
+
+
+
+  <!-- //////////////////////////////////////////////////////////////////////////// -->
+
+  <!-- START FOOTER -->
+  
+    <!-- END FOOTER -->
+
+
+
+    <!-- ================================================
+    Scripts
+    ================================================ -->
+    
+    <!-- jQuery Library -->
+    <script type="text/javascript" src="js/plugins/jquery-1.11.2.min.js"></script>    
+    <!--materialize js-->
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <!--prism-->
+    <script type="text/javascript" src="js/plugins/prism/prism.js"></script>
+    <!--scrollbar-->
+    <script type="text/javascript" src="js/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <!-- data-tables -->
+    <script type="text/javascript" src="js/plugins/data-tables/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="js/plugins/data-tables/data-tables-script.js"></script>
+    <!-- chartist -->
+    
+    
+    <!--plugins.js - Some Specific JS codes for Plugin Settings-->
+    <script type="text/javascript" src="js/plugins.min.js"></script>
+    <!--custom-script.js - Add your own theme custom JS-->
+    
+    <script type="text/javascript" src="js/custom.js"></script>
+    <script type="text/javascript" src="js/activity/sync.js"></script>
+
+    <script type="text/javascript">
+        /*Show entries on click hide*/
+        $(document).ready(function(){
+
+var monthNames = ["January", "February", "March", "April", "May", "June",
+  "July", "August", "September", "October", "November", "December"
+];
+var appPath = localStorage.getItem("appPath");
+var d = new Date();
+var strDate = d.getDate()+' '+(monthNames[d.getMonth()])+', '+d.getFullYear();
+$("#P1980604345").val(strDate);
+
+getList();
+          //return false;
+
+          $("#myTable").hide();
+   //         var t = $('#dtable').DataTable();
+            var $input = $('#P1980604345')
+            $input.on("change", function () {
+                
+                getList();
+                
+                $(".picker__close").click()
+            });
+            function getList()
+            {
+                
+                var date = $('#P1980604345').val();
+                $.ajax({
+            url: appPath+'getFoodList',
+            type: 'POST',
+            data: {id : localStorage.getItem("user_id"), date: date},
+            success: function (message)
+            {
+                if (message.success == 1)
+                {
+                    
+                    $("#myTable").show();
+                    $("#myTable > tbody").html("");
+                    //  table.empty();
+                    html = '';
+                    var count = 1;
+                    $.each(message.data, function( k, order ) {
+                        html += "<tr class='new'>";
+                        var userid = localStorage.getItem("user_id");
+                        if(order.access==1)
+                        {
+                          var action = "<a class='btn-floating waves-effect waves-light removeorder' id='"+order.id+"'><i class='mdi-content-clear'></i></a>";  
+                        }
+                        else
+                        {
+                          var action ="<td> </td>";
+                        }
+                        $("#myTable > tbody").append("<tr><td>"+order.name+"</td><td>"+order.food+"</td><td>"+action+"</td></tr>");
+                        console.log(html)
+
+                    count = count +1;
+                    });
+                    console.log(html)
+                    if(count==1)
+                    {
+                        $("#myTable > tbody").html("<tr><td>No Order for the day</td><td></td><td></td></tr>");
+                    }
+                    //var table = $('#data-table-simple').DataTable();
+                    //$('#data-table-simple').draw();
+                    
+                } else
+                {
+                    
+                }
+
+
+            }
+        });
+            }
+
+             $(document).on("click",".removeorder",function() {
+  
+            
+//            $(".removeorder").click(function(){
+
+                   var orderid = this.id; 
+                     swal({    title: "Are you sure to delete the Food Order?",
+              text: "You won't be getting food for the selected date",   
+              type: "warning",   
+              showCancelButton: true,   
+              confirmButtonColor: "#DD6B55",   
+              confirmButtonText: "Yes, delete it!",   
+              closeOnConfirm: false }, 
+              function(){   
+
+
+                            $.ajax({
+            url: appPath+'cancelOrder',
+            type: 'POST',
+            data: {id : localStorage.getItem("user_id"), orderid : orderid },
+            success: function (message)
+            {
+                if (message.success == 1)
+                {
+                    var date = $('#P1980604345').val();
+                    $("#myTable > tbody").html("");
+                      $.ajax({
+            url: appPath+'getFoodList',
+            type: 'POST',
+            data: {id : localStorage.getItem("user_id"), date: date},
+            success: function (message)
+            {
+                if (message.success == 1)
+                {
+                    
+                    $("#dtable").show();
+                    $(".new").hide();
+                    //  table.empty();
+                    var count = 1;
+                    $('#tablebody').html('');
+                    $.each(message.data, function( k, order ) {
+                        html += "<tr class='new'>";
+                        var userid = localStorage.getItem("user_id");
+                        if(order.access==1)
+                        {
+                          var action = "<a class='btn-floating waves-effect waves-light removeorder' id='"+order.id+"'><i class='mdi-content-clear'></i></a>";  
+                        }
+                        else
+                        {
+                          var action ="<td> </td>";
+                        }
+                        $("#myTable > tbody").append("<tr><td>"+order.name+"</td><td>"+order.food+"</td><td>"+action+"</td></tr>");
+                        console.log(html)
+
+                    count = count +1;
+                    });
+                    console.log(html)
+                    html = '<table id="dtables" class="responsive-table display" cellspacing="0"><tr><th>Name</th><th>Date</th><th>Food Type</th><th>Action</th></tr>'+html+'</table>';
+                    $('#tablebody').append(html);
+                    if(count==1)
+                    {
+                        $("#myTable > tbody").html("<tr><td>No Order for the day</td><td></td><td></td></tr>");
+                    }
+                    
+                } else
+                {
+                    
+                }
+
+
+            }
+        });
+
+
+                swal(message.title, message.message, "success"); 
+
+                } else
+                {
+                    swal(message.title, message.message, "error"); 
+                }
+
+
+            }
+        });
+
+
+
+
+
+              
+              });
+
+
+
+                      
+                      
+
+            
+
+
+
+
+
+                  });
+
+            $(".dropdown-content.select-dropdown li").on( "click", function() {
+                var that = this;
+                setTimeout(function(){
+                if($(that).parent().hasClass('active')){
+                        $(that).parent().removeClass('active');
+                        $(that).parent().hide();
+                }
+                },100);
+            });
+        });
+    </script>
+    <script type="text/javascript" src="js/plugins/sweetalert/sweetalert.min.js"></script>   
+</body>
+
+
+
+</html>

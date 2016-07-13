@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!--================================================================================
+<!--
+================================================================================
   Project : Wekancode Mobile App
-  Version : 1.0
+  Version : 1.1
   Author  : Sutlhan Alaludeen
   Author URL: http://www.sulthanallaudeen.com
-================================================================================ -->
-
-
+================================================================================
+-->
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="msapplication-tap-highlight" content="no">
@@ -20,12 +20,7 @@
     <title>WekanCode</title>
 
     <!-- Favicons-->
-    <link rel="icon" href="images/favicon/favicon-32x32.png" sizes="32x32">
-    <!-- Favicons-->
-    <link rel="apple-touch-icon-precomposed" href="images/favicon/apple-touch-icon-152x152.png">
-    <!-- For iPhone -->
-    <meta name="msapplication-TileColor" content="#00bcd4">
-    <meta name="msapplication-TileImage" content="images/favicon/mstile-144x144.png">
+    <link rel="icon" href="images/brand_logo.png">
     <!-- For Windows Phone -->
 
 
@@ -34,19 +29,16 @@
   <link href="css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection">
   <link href="css/style.min.css" type="text/css" rel="stylesheet" media="screen,projection">
     <!-- Custome CSS-->    
-  <link href="js/plugins/sweetalert/sweetalert.css" type="text/css" rel="stylesheet" media="screen,projection">
+   <link href="js/plugins/sweetalert/sweetalert.css" type="text/css" rel="stylesheet" media="screen,projection">
   <link href="css/layouts/page-center.css" type="text/css" rel="stylesheet" media="screen,projection">
 
   <!-- INCLUDED PLUGIN CSS ON THIS PAGE -->
-  
-  
+
   
 </head>
 
 <body background="images/intro_bg.jpg">
-  <!-- Start Page Loading -->
   
-  <!-- End Page Loading -->
 
 
 
@@ -62,15 +54,14 @@
         <div class="row margin">
           <div class="input-field col s12">
             <i class="mdi-social-person-outline prefix"></i>
-            <input id="employee_id" type="text" value="">
-            <label for="username" class="center-align">Employee Id</label>
+            <input id="employee_id" type="text" value="" placeholder="Username">
+            
           </div>
         </div>
         <div class="row margin">
           <div class="input-field col s12">
             <i class="mdi-action-lock-outline prefix"></i>
-            <input id="password" type="password" value="">
-            <label for="password">Password</label>
+            <input id="password" type="password" value="" placeholder="Password">
           </div>
         </div>
         <div class="row">          
@@ -81,7 +72,7 @@
         </div>
         <div class="row">
           <div class="input-field col s12">
-          <input type="button" id="loginuser" class="btn waves-light col s12 loginuser" style="background-color:#833CA3" value="Login">
+            <input type="button" id="loginuser" class="btn waves-light col s12 loginuser" style="background-color:#833CA3" value="Login">
           </div>
         </div>
         <div class="row">
@@ -89,7 +80,7 @@
             <p class="margin medium-small"></p>
           </div>
           <div class="input-field col s6 m6 l6">
-              <p class="margin right-align medium-small"><a href="forgot-password.html">Forgot password ?</a></p>
+              <p class="margin right-align medium-small" style="display:none"><a href="forgot-password.html">Forgot password ?</a></p>
           </div>          
         </div>
 
@@ -105,21 +96,11 @@
 
   <!-- jQuery Library -->
   <script type="text/javascript" src="js/plugins/jquery-1.11.2.min.js"></script>
-  <!--materialize js-->
-  <script type="text/javascript" src="js/materialize.min.js"></script>
-    <!--prism -->
-  <script type="text/javascript" src="js/plugins/prism/prism.js"></script>
-  
-  <!--prism-->
-  
-    
-  <!--custom.js - Add your own theme custom JS-->
   <script type="text/javascript" src="js/custom.js"></script>
   <script type="text/javascript" src="js/activity/login.js"></script>
   <script type="text/javascript" src="js/plugins/sweetalert/sweetalert.min.js"></script>   
 
 </body>
-
 
 
 </html>

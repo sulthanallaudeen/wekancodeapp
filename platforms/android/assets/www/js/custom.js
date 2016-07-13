@@ -1,54 +1,35 @@
 $(document).ready(function () {
 
+var currentpath = window.location.href; 
+//Getting Current Path
 
+//Checking and Setting App Path
 
-var pathname = window.location.href; // Returns path only
+if(currentpath.indexOf('android_asset') != -1){
+//Current App is Android
+var appPath = 'http://wekancode.com/wekancode/';
 
-
-alert(pathname)
-if(pathname.indexOf('android_asset') != -1){
-    alert("Android");
 }
-else if(pathname.indexOf('localhost') != -1){
-    alert("LocalHost");
+else if(currentpath.indexOf('localhost') != -1){
+//Current App is Localhost
+var appPath = 'http://localhost/wekancode/';
 }
-else if(pathname.indexOf('localhost') != -1){
-	alert('Online')
-}
-else
-{
-	alert("Error");	
-}
-
-
-
-
-//alert(pathname)
-
-
-
-
-
-
-var mode = 'live';
-//var mode = 'local';
-if(mode=='live')
-{
-	var appPath = 'http://wekancode.com/wekancode/';
-	//var appPath = 'http://localhost/wekancode/';
-	var appPath = 'http://192.168.1.5/wekancode/';
+else if(currentpath.indexOf('wekancode.com') != -1){
+//Current App is Online
+var appPath = 'http://wekancode.com/wekancode/';
 }
 else
 {
-	var appPath = 'http://localhost/wekancode/';
-	var appPath = 'http://192.168.1.5/wekancode/';
+//Can't detect the App state, So concluding as localhost
+var appPath = 'http://192.168.1.9/wekancode/';
 }
+//Setting the localstorage for API Calls
+//var appPath = 'http://wekancode.com/wekancode/';
+
+
+localStorage.setItem("currentPath", currentpath);
+
 localStorage.setItem("appPath", appPath);
-
-
-
-
-
 
 
 });

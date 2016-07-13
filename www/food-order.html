@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!--================================================================================
+<!--
+================================================================================
   Project : Wekancode Mobile App
-  Version : 1.0
+  Version : 1.1
   Author  : Sutlhan Alaludeen
   Author URL: http://www.sulthanallaudeen.com
-================================================================================ -->
-
-
+================================================================================
+-->
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -20,12 +20,7 @@
     <title>WekanCode</title>
 
     <!-- Favicons-->
-    <link rel="icon" href="images/favicon/favicon-32x32.png" sizes="32x32">
-    <!-- Favicons-->
-    <link rel="apple-touch-icon-precomposed" href="images/favicon/apple-touch-icon-152x152.png">
-    <!-- For iPhone -->
-    <meta name="msapplication-TileColor" content="#00bcd4">
-    <meta name="msapplication-TileImage" content="images/favicon/mstile-144x144.png">
+    <link rel="icon" href="images/brand_logo.png">
     <!-- For Windows Phone -->
 
 
@@ -83,8 +78,38 @@
         <div class="wrapper">
 
             <!-- START LEFT SIDEBAR NAV-->
-            <aside id="left-nav">
-            
+            <aside id="left-sidebar-nav">
+                <ul id="slide-out" class="side-nav fixed leftside-navigation">
+                <li class="user-details cyan darken-2">
+                <div class="row">
+                    <div class="col col s4 m4 l4">
+                        <img src="" alt="" class="circle responsive-img valign profile-image" id="userImage">
+                    </div>
+                    <div class="col col s8 m8 l8">
+                        <ul id="profile-dropdown" class="dropdown-content">
+                            <li><a href="profile.html"><i class="mdi-action-face-unlock"></i> Profile</a>
+                            </li>
+                            <li><a href="settings.html"><i class="mdi-action-settings"></i> Settings</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li><a href="logout.html"><i class="mdi-hardware-keyboard-tab"></i> Logout</a>
+                            </li>
+                        </ul>
+                        <a class="btn-flat dropdown-button waves-effect waves-light white-text profile-btn" href="#" data-activates="profile-dropdown"><span id="user_name"></span><i class="mdi-navigation-arrow-drop-down right"></i></a>
+                        <p class="user-roal" id="user_role"></p>
+                    </div>
+                </div>
+                </li>
+                <li class="bold active"><a href="dashboard.html" class="waves-effect waves-cyan"><i class="mdi-action-dashboard"></i> Dashboard</a>
+                </li>
+                <li class="bold"><a href="food-order.html" class="waves-effect waves-cyan"><i class="mdi-maps-local-restaurant"></i> Food Order </a>
+                </li>
+                <li class="bold"><a href="employees.html" class="waves-effect waves-cyan"><i class="mdi-social-people"></i> Employees</a>
+                </li>
+                <li class="bold"><a href="media.html" class="waves-effect waves-cyan"><i class="mdi-social-people"></i> Media</a>
+                </li>
+            </ul>
+                <a href="#" data-activates="slide-out" class="sidebar-collapse btn-floating btn-medium waves-effect waves-light hide-on-large-only cyan"><i class="mdi-navigation-menu"></i></a>
             </aside>
             <!-- END LEFT SIDEBAR NAV-->
 
@@ -114,7 +139,13 @@
 
                             
                             <div class="col s12 m12 l6">
+
                 <div class="card-panel">
+
+<a href="food-order-list.html" class="btn-floating btn-large btn-price waves-effect waves-light  pink accent-2" style="float:right">
+    <i class="mdi-action-history"></i>
+</a>
+
                   <h4 class="header1">Food Order</h4>
                   <div class="row">
                     <form class="col s12">
@@ -139,7 +170,7 @@
                           <input type="text" class="datepicker picker__input" readonly="" id="P1980604345" tabindex="-1" aria-haspopup="true" aria-expanded="false" aria-readonly="false" aria-owns="P1980604345_root" placeholder="Date">
                               </div>
                         </div>
-                      <div class="row">
+                        <div class="row" style="display:none">
                         <div class=" col s12">
                           <div class="switch">
                                 Get Email Response : 
@@ -151,7 +182,6 @@
                               </div>
                         </div>
                       </div>
-                      
                       <div class="row">
                         
                         <div class="row">
@@ -161,11 +191,15 @@
                             </button>
                           </div>
                         </div>
+
                       </div>
                     </form>
                   </div>
                 </div>
               </div>
+
+
+
 
 
                         </div>
@@ -190,17 +224,7 @@
                     <!--work collections end-->
 
                     <!-- Floating Action Button -->
-                    <div class="fixed-action-btn" style="bottom: 50px; right: 19px;">
-                        <a class="btn-floating btn-large">
-                          <i class="mdi-action-stars"></i>
-                        </a>
-                        <ul>
-                          <li><a href="css-helpers.html" class="btn-floating red"><i class="large mdi-communication-live-help"></i></a></li>
-                          <li><a href="app-widget.html" class="btn-floating yellow darken-1"><i class="large mdi-device-now-widgets"></i></a></li>
-                          <li><a href="app-calendar.html" class="btn-floating green"><i class="large mdi-editor-insert-invitation"></i></a></li>
-                          <li><a href="app-email.html" class="btn-floating blue"><i class="large mdi-communication-email"></i></a></li>
-                        </ul>
-                    </div>
+                    <span id="float_action"></span>
                     <!-- Floating Action Button -->
 
                 </div>
@@ -241,6 +265,7 @@
     <!--scrollbar-->
     <script type="text/javascript" src="js/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
     
+    <script type="text/javascript" src="js/plugins/sweetalert/sweetalert.min.js"></script>   
 
     
     <!-- google map api -->

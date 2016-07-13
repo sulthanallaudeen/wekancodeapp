@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!--================================================================================
+<!--
+================================================================================
   Project : Wekancode Mobile App
-  Version : 1.0
+  Version : 1.1
   Author  : Sutlhan Alaludeen
   Author URL: http://www.sulthanallaudeen.com
-================================================================================ -->
-
-
-
+================================================================================
+-->
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
@@ -20,12 +19,7 @@
     <title>WekanCode</title>
 
     <!-- Favicons-->
-    <link rel="icon" href="images/favicon/favicon-32x32.png" sizes="32x32">
-    <!-- Favicons-->
-    <link rel="apple-touch-icon-precomposed" href="images/favicon/apple-touch-icon-152x152.png">
-    <!-- For iPhone -->
-    <meta name="msapplication-TileColor" content="#00bcd4">
-    <meta name="msapplication-TileImage" content="images/favicon/mstile-144x144.png">
+    <link rel="icon" href="images/brand_logo.png">
     <!-- For Windows Phone -->
 
 
@@ -38,7 +32,6 @@
 
     <!-- INCLUDED PLUGIN CSS ON THIS PAGE -->
     <link href="js/plugins/perfect-scrollbar/perfect-scrollbar.css" type="text/css" rel="stylesheet" media="screen,projection">
-    
 
 
 </head>
@@ -78,37 +71,67 @@
 
     <!-- START MAIN -->
     <div id="main">
-       <!-- START WRAPPER -->
+        <!-- START WRAPPER -->
         <div class="wrapper">
 
             <!-- START LEFT SIDEBAR NAV-->
             <aside id="left-sidebar-nav">
+                <ul id="slide-out" class="side-nav fixed leftside-navigation">
+                <li class="user-details cyan darken-2">
+                <div class="row">
+                    <div class="col col s4 m4 l4">
+                        <img src="" alt="" class="circle responsive-img valign profile-image" id="userImage">
+                    </div>
+                    <div class="col col s8 m8 l8">
+                        <ul id="profile-dropdown" class="dropdown-content">
+                            <li><a href="profile.html"><i class="mdi-action-face-unlock"></i> Profile</a>
+                            </li>
+                            <li><a href="settings.html"><i class="mdi-action-settings"></i> Settings</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li><a href="logout.html"><i class="mdi-hardware-keyboard-tab"></i> Logout</a>
+                            </li>
+                        </ul>
+                        <a class="btn-flat dropdown-button waves-effect waves-light white-text profile-btn" href="#" data-activates="profile-dropdown"><span id="user_name"></span><i class="mdi-navigation-arrow-drop-down right"></i></a>
+                        <p class="user-roal" id="user_role"></p>
+                    </div>
+                </div>
+                </li>
+                <li class="bold active"><a href="dashboard.html" class="waves-effect waves-cyan"><i class="mdi-action-dashboard"></i> Dashboard</a>
+                </li>
+                <li class="bold"><a href="food-order.html" class="waves-effect waves-cyan"><i class="mdi-maps-local-restaurant"></i> Food Order </a>
+                </li>
+                <li class="bold"><a href="employees.html" class="waves-effect waves-cyan"><i class="mdi-social-people"></i> Employees</a>
+                </li>
+                <li class="bold"><a href="media.html" class="waves-effect waves-cyan"><i class="mdi-social-people"></i> Media</a>
+                </li>
+            </ul>
+                <a href="#" data-activates="slide-out" class="sidebar-collapse btn-floating btn-medium waves-effect waves-light hide-on-large-only cyan"><i class="mdi-navigation-menu"></i></a>
             </aside>
             <!-- END LEFT SIDEBAR NAV-->
 
             <!-- //////////////////////////////////////////////////////////////////////////// -->
 
             <!-- START CONTENT -->
-
             <section id="content">
 
                 <!--start container-->
                 <div class="container">
 
                     <!--chart dashboard start-->
-                   
+                    
                     <!--chart dashboard end-->
 
                     <!-- //////////////////////////////////////////////////////////////////////////// -->
 
                     <!--card stats start-->
-                    <div id="card-stats">
+                    <div id="card-stats" style="display:none">
                         <div class="row">
                             <div class="col s12 m6 l3">
                                 <div class="card">
                                     <div class="card-content  green white-text">
-                                        <p class="card-stats-title"><i class="mdi-social-group-add"></i> New Email</p>
-                                        <h4 class="card-stats-number">5</h4>
+                                        <p class="card-stats-title"><i class="mdi-social-group-add"></i> New Clients</p>
+                                        <h4 class="card-stats-number">566</h4>
                                         <p class="card-stats-compare"><i class="mdi-hardware-keyboard-arrow-up"></i> 15% <span class="green-text text-lighten-5">from yesterday</span>
                                         </p>
                                     </div>
@@ -120,8 +143,8 @@
                             <div class="col s12 m6 l3">
                                 <div class="card">
                                     <div class="card-content pink lighten-1 white-text">
-                                        <p class="card-stats-title"><i class="mdi-editor-insert-drive-file"></i> New Tasks</p>
-                                        <h4 class="card-stats-number">7</h4>
+                                        <p class="card-stats-title"><i class="mdi-editor-insert-drive-file"></i> New Invoice</p>
+                                        <h4 class="card-stats-number">1806</h4>
                                         <p class="card-stats-compare"><i class="mdi-hardware-keyboard-arrow-down"></i> 3% <span class="deep-purple-text text-lighten-5">from last month</span>
                                         </p>
                                     </div>
@@ -133,8 +156,8 @@
                             <div class="col s12 m6 l3">
                                 <div class="card">
                                     <div class="card-content blue-grey white-text">
-                                        <p class="card-stats-title"><i class="mdi-action-trending-up"></i> Today Tasks</p>
-                                        <h4 class="card-stats-number">12</h4>
+                                        <p class="card-stats-title"><i class="mdi-action-trending-up"></i> Today Profit</p>
+                                        <h4 class="card-stats-number">$806.52</h4>
                                         <p class="card-stats-compare"><i class="mdi-hardware-keyboard-arrow-up"></i> 80% <span class="blue-grey-text text-lighten-5">from yesterday</span>
                                         </p>
                                     </div>
@@ -146,8 +169,8 @@
                             <div class="col s12 m6 l3">
                                 <div class="card">
                                     <div class="card-content purple white-text">
-                                        <p class="card-stats-title"><i class="mdi-editor-attach-money"></i>Total Tasks</p>
-                                        <h4 class="card-stats-number">23</h4>
+                                        <p class="card-stats-title"><i class="mdi-editor-attach-money"></i>Total Sales</p>
+                                        <h4 class="card-stats-number">$8990.63</h4>
                                         <p class="card-stats-compare"><i class="mdi-hardware-keyboard-arrow-up"></i> 70% <span class="purple-text text-lighten-5">last month</span>
                                         </p>
                                     </div>
@@ -166,7 +189,7 @@
                     <div id="card-widgets">
                         <div class="row">
 
-                            <div class="col s12 m12 l4">
+                            <div class="col s12 m12 l4" style="display:none">
                                 <ul id="task-card" class="collection with-header">
                                     <li class="collection-header cyan">
                                         <h4 class="task-card-title">My Task</h4>
@@ -197,27 +220,106 @@
                                     </li>
                                 </ul>
                             </div>
+                            <div class="col s12 m6 l4">
+                                <div id="flight-card" class="card">
+                                    <div class="card-header amber darken-2">
+                                        <div class="card-title" style="display:block">
+                                            <h4 class="flight-card-title">Feeds</h4>
+                                            <p class="flight-card-date" style="display:block">Tech Crunch</p>
+                                        </div>
+                                    </div>
+                                    <div class="" style="background-color:white">
+                                        <div class="" style="background-color:white">
+                                            
+                                            <iframe height="266" width="350" src="http://feed.mikle.com/widget/?rssmikle_url=http%3A%2F%2Ffeeds.feedburner.com%2FTechCrunch%2F&rssmikle_frame_width=330&rssmikle_frame_height=400&frame_height_by_article=0&rssmikle_target=_blank&rssmikle_font=Arial%2C%20Helvetica%2C%20sans-serif&rssmikle_font_size=12&rssmikle_border=off&responsive=off&text_align=left&text_align2=left&corner=off&scrollbar=on&autoscroll=on&scrolldirection=up&scrollstep=3&mcspeed=20&sort=Off&rssmikle_title=off&rssmikle_title_bgcolor=%230066FF&rssmikle_title_color=%23FFFFFF&rssmikle_item_bgcolor=%23FFFFFF&rssmikle_item_title_length=55&rssmikle_item_title_color=%230066FF&rssmikle_item_border_bottom=on&rssmikle_item_description=on&item_link=off&rssmikle_item_description_length=150&rssmikle_item_description_color=%23666666&rssmikle_item_date=gl1&rssmikle_timezone=Etc%2FGMT&datetime_format=%25b%20%25e%2C%20%25Y%20%25l%3A%25M%20%25p&item_description_style=text%2Btn&item_thumbnail=full&item_thumbnail_selection=auto&article_num=15&rssmikle_item_podcast=off&" scrolling="no" name="rssmikle_frame" marginwidth="0" marginheight="0" vspace="0" hspace="0" frameborder="0"></iframe>
+<div style="font-size:10px; text-align:center; width:300px;"></div>
 
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col s12 m6 l4" style="display:none">
+                                <div id="flight-card" class="card">
+                                    <div class="card-header amber darken-2">
+                                        <div class="card-title">
+                                            <h4 class="flight-card-title">Flight</h4>
+                                            <p class="flight-card-date">June 18, Thu 04:50</p>
+                                        </div>
+                                    </div>
+                                    <div class="card-content-bg white-text">
+                                        <div class="card-content">
+                                            <div class="row flight-state-wrapper">
+                                                <div class="col s5 m5 l5 center-align">
+                                                    <div class="flight-state">
+                                                        <h4 class="margin">LDN</h4>
+                                                        <p class="ultra-small">London</p>
+                                                    </div>
+                                                </div>
+                                                <div class="col s2 m2 l2 center-align">
+                                                    <i class="mdi-device-airplanemode-on flight-icon"></i>
+                                                </div>
+                                                <div class="col s5 m5 l5 center-align">
+                                                    <div class="flight-state">
+                                                        <h4 class="margin">SFO</h4>
+                                                        <p class="ultra-small">San Francisco</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col s6 m6 l6 center-align">
+                                                    <div class="flight-info">
+                                                        <p class="small"><span class="grey-text text-lighten-4">Depart:</span> 04.50</p>
+                                                        <p class="small"><span class="grey-text text-lighten-4">Flight:</span> IB 5786</p>
+                                                        <p class="small"><span class="grey-text text-lighten-4">Terminal:</span> B</p>
+                                                    </div>
+                                                </div>
+                                                <div class="col s6 m6 l6 center-align flight-state-two">
+                                                    <div class="flight-info">
+                                                        <p class="small"><span class="grey-text text-lighten-4">Arrive:</span> 08.50</p>
+                                                        <p class="small"><span class="grey-text text-lighten-4">Flight:</span> IB 5786</p>
+                                                        <p class="small"><span class="grey-text text-lighten-4">Terminal:</span> C</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col s12 m6 l4">
+                                <div id="profile-card" class="card">
+                                    <div class="card-image waves-effect waves-block waves-light">
+                                        <img class="activator" src="images/user-bg.jpg" alt="user background">
+                                    </div>
+                                    <div class="card-content">
+                                        <img src="" alt="" class="circle responsive-img activator card-profile-image userImage">
+                                        <a class="btn-floating activator btn-move-up waves-effect waves-light darken-2 right">
+                                            <i class="mdi-action-account-circle"></i>
+                                        </a>
+
+                                        <span class="card-title activator grey-text text-darken-4 dashboardUserName" ></span>
+                                        <p><i class="mdi-action-perm-identity cyan-text text-darken-2"></i> <span id="dashboardUserDesignation"></span></p>
+                                        <p><i class="mdi-action-perm-phone-msg cyan-text text-darken-2"></i> <span id="userTel"></span></p>
+                                        <p><i class="mdi-communication-email cyan-text text-darken-2"></i> <span id="userEmail"></span></p>
+
+                                    </div>
+                                    <div class="card-reveal">
+                                        <span class="card-title grey-text text-darken-4"><span class="dashboardUserName"></span> <i class="mdi-navigation-close right"></i></span>
+                                        
+                                    </div>
+                                </div>
+                            </div>
 
                         </div>
 
-                        <div class="row">
-                            <!-- blog card -->
-                            
-
-                            <!-- product-card -->
-                            
-
-                            <!-- map-card -->
-                            
-
-                    </div>
+                        
                     <!--card widgets end-->
 
                     <!-- //////////////////////////////////////////////////////////////////////////// -->
 
                     <!--work collections start-->
-                    <div id="work-collections">
+                    <div id="work-collections" style="display:none">
                         <div class="row">
                             <div class="col s12 m12 l6">
                                 <ul id="projects-collection" class="collection">
@@ -364,17 +466,7 @@
                     <!--work collections end-->
 
                     <!-- Floating Action Button -->
-                    <div class="fixed-action-btn" style="bottom: 50px; right: 19px;">
-                        <a class="btn-floating btn-large">
-                          <i class="mdi-action-stars"></i>
-                        </a>
-                        <ul>
-                          <li><a href="css-helpers.html" class="btn-floating red"><i class="large mdi-communication-live-help"></i></a></li>
-                          <li><a href="app-widget.html" class="btn-floating yellow darken-1"><i class="large mdi-device-now-widgets"></i></a></li>
-                          <li><a href="app-calendar.html" class="btn-floating green"><i class="large mdi-editor-insert-invitation"></i></a></li>
-                          <li><a href="food-order.html" class="btn-floating blue"><i class="large mdi-maps-local-restaurant"></i></a></li>
-                        </ul>
-                    </div>
+                    <span id="float_action"></span>
                     <!-- Floating Action Button -->
 
                 </div>
@@ -384,6 +476,141 @@
 
             <!-- //////////////////////////////////////////////////////////////////////////// -->
             <!-- START RIGHT SIDEBAR NAV-->
+            <aside id="right-sidebar-nav">
+                <ul id="chat-out" class="side-nav rightside-navigation">
+                    <li class="li-hover">
+                    <a href="#" data-activates="chat-out" class="chat-close-collapse right"><i class="mdi-navigation-close"></i></a>
+                    <div id="right-search" class="row">
+                        <form class="col s12">
+                            <div class="input-field">
+                                <i class="mdi-action-search prefix"></i>
+                                <input id="icon_prefix" type="text" class="validate">
+                                <label for="icon_prefix">Search</label>
+                            </div>
+                        </form>
+                    </div>
+                    </li>
+                    <li class="li-hover">
+                        <ul class="chat-collapsible" data-collapsible="expandable">
+                        <li>
+                            <div class="collapsible-header teal white-text active"><i class="mdi-social-whatshot"></i>Recent Activity</div>
+                            <div class="collapsible-body recent-activity">
+                                <div class="recent-activity-list chat-out-list row">
+                                    <div class="col s3 recent-activity-list-icon"><i class="mdi-action-add-shopping-cart"></i>
+                                    </div>
+                                    <div class="col s9 recent-activity-list-text">
+                                        <a href="#">just now</a>
+                                        <p>Jim Doe Purchased new equipments for zonal office.</p>
+                                    </div>
+                                </div>
+                                <div class="recent-activity-list chat-out-list row">
+                                    <div class="col s3 recent-activity-list-icon"><i class="mdi-device-airplanemode-on"></i>
+                                    </div>
+                                    <div class="col s9 recent-activity-list-text">
+                                        <a href="#">Yesterday</a>
+                                        <p>Your Next flight for USA will be on 15th August 2015.</p>
+                                    </div>
+                                </div>
+                                <div class="recent-activity-list chat-out-list row">
+                                    <div class="col s3 recent-activity-list-icon"><i class="mdi-action-settings-voice"></i>
+                                    </div>
+                                    <div class="col s9 recent-activity-list-text">
+                                        <a href="#">5 Days Ago</a>
+                                        <p>Natalya Parker Send you a voice mail for next conference.</p>
+                                    </div>
+                                </div>
+                                <div class="recent-activity-list chat-out-list row">
+                                    <div class="col s3 recent-activity-list-icon"><i class="mdi-action-store"></i>
+                                    </div>
+                                    <div class="col s9 recent-activity-list-text">
+                                        <a href="#">Last Week</a>
+                                        <p>Jessy Jay open a new store at S.G Road.</p>
+                                    </div>
+                                </div>
+                                <div class="recent-activity-list chat-out-list row">
+                                    <div class="col s3 recent-activity-list-icon"><i class="mdi-action-settings-voice"></i>
+                                    </div>
+                                    <div class="col s9 recent-activity-list-text">
+                                        <a href="#">5 Days Ago</a>
+                                        <p>Natalya Parker Send you a voice mail for next conference.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="collapsible-header light-blue white-text active"><i class="mdi-editor-attach-money"></i>Sales Repoart</div>
+                            <div class="collapsible-body sales-repoart">
+                                <div class="sales-repoart-list  chat-out-list row">
+                                    <div class="col s8">Target Salse</div>
+                                    <div class="col s4"><span id="sales-line-1"></span>
+                                    </div>
+                                </div>
+                                <div class="sales-repoart-list chat-out-list row">
+                                    <div class="col s8">Payment Due</div>
+                                    <div class="col s4"><span id="sales-bar-1"></span>
+                                    </div>
+                                </div>
+                                <div class="sales-repoart-list chat-out-list row">
+                                    <div class="col s8">Total Delivery</div>
+                                    <div class="col s4"><span id="sales-line-2"></span>
+                                    </div>
+                                </div>
+                                <div class="sales-repoart-list chat-out-list row">
+                                    <div class="col s8">Total Progress</div>
+                                    <div class="col s4"><span id="sales-bar-2"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="collapsible-header red white-text"><i class="mdi-action-stars"></i>Favorite Associates</div>
+                            <div class="collapsible-body favorite-associates">
+                                <div class="favorite-associate-list chat-out-list row">
+                                    <div class="col s4"><img src="images/avatar.jpg" alt="" class="circle responsive-img online-user valign profile-image">
+                                    </div>
+                                    <div class="col s8">
+                                        <p>Eileen Sideways</p>
+                                        <p class="place">Los Angeles, CA</p>
+                                    </div>
+                                </div>
+                                <div class="favorite-associate-list chat-out-list row">
+                                    <div class="col s4"><img src="images/avatar.jpg" alt="" class="circle responsive-img online-user valign profile-image">
+                                    </div>
+                                    <div class="col s8">
+                                        <p>Zaham Sindil</p>
+                                        <p class="place">San Francisco, CA</p>
+                                    </div>
+                                </div>
+                                <div class="favorite-associate-list chat-out-list row">
+                                    <div class="col s4"><img src="images/avatar.jpg" alt="" class="circle responsive-img offline-user valign profile-image">
+                                    </div>
+                                    <div class="col s8">
+                                        <p>Renov Leongal</p>
+                                        <p class="place">Cebu City, Philippines</p>
+                                    </div>
+                                </div>
+                                <div class="favorite-associate-list chat-out-list row">
+                                    <div class="col s4"><img src="images/avatar.jpg" alt="" class="circle responsive-img online-user valign profile-image">
+                                    </div>
+                                    <div class="col s8">
+                                        <p>Weno Carasbong</p>
+                                        <p>Tokyo, Japan</p>
+                                    </div>
+                                </div>
+                                <div class="favorite-associate-list chat-out-list row">
+                                    <div class="col s4"><img src="images/avatar.jpg" alt="" class="circle responsive-img offline-user valign profile-image">
+                                    </div>
+                                    <div class="col s8">
+                                        <p>Nusja Nawancali</p>
+                                        <p class="place">Bangkok, Thailand</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        </ul>
+                    </li>
+                </ul>
+            </aside>
             <!-- LEFT RIGHT SIDEBAR NAV-->
 
         </div>
@@ -393,20 +620,34 @@
     <!-- END MAIN -->
 
 
+    <style>
+    #header
+    {
 
+    }
+   /* .fg_wid_header
+    {
+        display: none;
+    }
+    .fg_wid_footer a{
+        display: none;
+    }
+    .fg_title
+    {
+        color: rgba(0, 0, 0, 0.87);
+    }
+    .fg_wid_footer:before {
+      content: "Click on the link to read full news";
+      margin: 0px 0px 0px 97px;
+    }
+    .fg_wid_footer
+    {
+        background-color:white;
+    }*/
+    </style>
     <!-- //////////////////////////////////////////////////////////////////////////// -->
 
-    <!-- START FOOTER -->
-    <footer class="page-footer" style="display:none">
-        
-        <div class="footer-copyright">
-            <div class="container">
-                Copyright © 2015 <a class="grey-text text-lighten-4" href="http://themeforest.net/user/geekslabs/portfolio?ref=geekslabs" target="_blank">GeeksLabs</a> All rights reserved.
-                <span class="right"> Design and Developed by <a class="grey-text text-lighten-4" href="http://geekslabs.com/">GeeksLabs</a></span>
-            </div>
-        </div>
-    </footer>
-    <!-- END FOOTER -->
+    
 
 
     <!-- ================================================
@@ -414,29 +655,22 @@
     ================================================ -->
     
     <!-- jQuery Library -->
-    <script type="text/javascript" src="js/plugins/jquery-1.11.2.min.js"></script>
-    <script type="text/javascript" src="js/custom.js"></script>
-    <script type="text/javascript" src="js/activity/sync.js"></script>
-    <!--materialize js-->
+    <script type="text/javascript" src="js/plugins/jquery-1.11.2.min.js"></script>    
     <script type="text/javascript" src="js/materialize.min.js"></script>
-    <!--scrollbar-->
+
+    <script type="text/javascript" src="js/custom.js"></script>
+    <script type="text/javascript" src="js/activity/updatedata.js"></script>
+    <script type="text/javascript" src="js/activity/sync.js"></script>
+
+
     <script type="text/javascript" src="js/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
-    
-
-    
-    <!-- google map api -->
-    
-
-    <!--jvectormap-->
-    
-
-    
-    <!--plugins.js - Some Specific JS codes for Plugin Settings-->
     <script type="text/javascript" src="js/plugins.min.js"></script>
-    <!--custom.js - Add your own theme custom JS-->
+
+    <!--custom-script.js - Add your own theme custom JS-->
     
     <!-- Toast Notification -->
 </body>
 
 
+<!-- Mirrored from demo.geekslabs.com/materialize/v3.1/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 29 Jun 2016 07:04:14 GMT -->
 </html>
