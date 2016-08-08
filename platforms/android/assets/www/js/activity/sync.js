@@ -23,7 +23,7 @@ function checklogin()
 		var full_name = localStorage.getItem("full_name");
 		var user_tel = localStorage.getItem("user_tel");
 		var user_email = localStorage.getItem("user_email");
-		
+		var user_emp_id = localStorage.getItem("user_emp_id");
 		var user_designation = localStorage.getItem("user_designation");
 		var user_image = appPath+'public/admin/images/team/'+localStorage.getItem("user_image");
 
@@ -121,6 +121,11 @@ function updateprofile()
                     localStorage.setItem("user_name", name);
                     localStorage.setItem("user_email", message.data.email);
                     localStorage.setItem("user_designation", message.data.designation);
+                    localStorage.setItem("user_designation", message.data.designation);
+                    localStorage.setItem("user_about", message.data.about);
+                    localStorage.setItem("user_emp_id", message.data.employee_id);
+
+
                 } else
                 {
                     window.location.href = "index.html";
@@ -133,8 +138,12 @@ function updateprofile()
 		//User Logged in
 		var user_name = localStorage.getItem("user_name");
 		var user_designation = localStorage.getItem("user_designation");
+		var user_about = localStorage.getItem("user_about");
 		$("#user_name").html(user_name)
 		$("#user_role").html(user_designation)
+		$(".profileAboutMe").html(user_about)
+		
+		
 	}	
 }
 

@@ -34,6 +34,7 @@
 
 
   <!-- INCLUDED PLUGIN CSS ON THIS PAGE -->
+  <link href="js/plugins/sweetalert/sweetalert.css" type="text/css" rel="stylesheet" media="screen,projection">
   <link href="js/plugins/prism/prism.css" type="text/css" rel="stylesheet" media="screen,projection">
   <link href="js/plugins/perfect-scrollbar/perfect-scrollbar.css" type="text/css" rel="stylesheet" media="screen,projection">
   <link href="js/plugins/data-tables/css/jquery.dataTables.min.css" type="text/css" rel="stylesheet" media="screen,projection">
@@ -54,16 +55,8 @@
             <nav class="navbar-color">
                 <div class="nav-wrapper">
                     <ul class="left">                      
-                      <li><h1 class="logo-wrapper"><a href="dashboard.html" class="brand-logo darken-1"><img src="images/materialize-logo.png" alt="materialize logo"></a> <span class="logo-text">Materialize</span></h1></li>
+                      <li><h1 class="logo-wrapper"><a href="dashboard.html" class="brand-logo darken-1"><img src="images/materialize-logo.png" alt="materialize logo"></a> <span class="logo-text">WeKanCode</span></h1></li>
                     </ul>
-                    <div class="header-search-wrapper hide-on-med-and-down">
-                        <i class="mdi-action-search"></i>
-                        <input type="text" name="Search" class="header-search-input z-depth-2" placeholder="Search"/>
-                    </div>
-                    
-                    <!-- translation-button -->
-                    
-                    <!-- notifications-dropdown -->
                 </div>
             </nav>
         </div>
@@ -251,6 +244,7 @@
 var monthNames = ["January", "February", "March", "April", "May", "June",
   "July", "August", "September", "October", "November", "December"
 ];
+var appPath = localStorage.getItem("appPath");
 var d = new Date();
 var strDate = d.getDate()+' '+(monthNames[d.getMonth()])+', '+d.getFullYear();
 $("#P1980604345").val(strDate);
@@ -269,7 +263,7 @@ getList();
             });
             function getList()
             {
-                var appPath = localStorage.getItem("appPath");
+                
                 var date = $('#P1980604345').val();
                 $.ajax({
             url: appPath+'getFoodList',
@@ -308,11 +302,34 @@ getList();
                     }
                     //var table = $('#data-table-simple').DataTable();
                     //$('#data-table-simple').draw();
-                    $(".removeorder").click(function(){
-                      
-                      var orderid = this.id;
+                    
+                } else
+                {
+                    
+                }
 
-                          $.ajax({
+
+            }
+        });
+            }
+
+             $(document).on("click",".removeorder",function() {
+  
+            
+//            $(".removeorder").click(function(){
+
+                   var orderid = this.id; 
+                     swal({    title: "Are you sure to delete the Food Order?",
+              text: "You won't be getting food for the selected date",   
+              type: "warning",   
+              showCancelButton: true,   
+              confirmButtonColor: "#DD6B55",   
+              confirmButtonText: "Yes, delete it!",   
+              closeOnConfirm: false }, 
+              function(){   
+
+
+                            $.ajax({
             url: appPath+'cancelOrder',
             type: 'POST',
             data: {id : localStorage.getItem("user_id"), orderid : orderid },
@@ -320,7 +337,7 @@ getList();
             {
                 if (message.success == 1)
                 {
-                    
+                    var date = $('#P1980604345').val();
                     $("#myTable > tbody").html("");
                       $.ajax({
             url: appPath+'getFoodList',
@@ -370,34 +387,36 @@ getList();
         });
 
 
-
+                swal(message.title, message.message, "success"); 
 
                 } else
                 {
-                    
+                    swal(message.title, message.message, "error"); 
                 }
 
 
             }
         });
+
+
+
+
+
+              
+              });
+
+
+
+                      
+                      
+
+            
 
 
 
 
 
                   });
-                } else
-                {
-                    
-                }
-
-
-            }
-        });
-            }
-
-            
-
 
             $(".dropdown-content.select-dropdown li").on( "click", function() {
                 var that = this;
@@ -410,6 +429,7 @@ getList();
             });
         });
     </script>
+    <script type="text/javascript" src="js/plugins/sweetalert/sweetalert.min.js"></script>   
 </body>
 
 

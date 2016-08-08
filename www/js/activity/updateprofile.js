@@ -28,7 +28,7 @@ function checklogin()
 		$("#user_name").html(user_name)
         $("#user_id").val(localStorage.getItem("user_emp_id"))
 		$("#user_role").html(user_designation)
-         //$("#uploadimage").attr("action", appPath+"imageupload");
+         $("#MyUploadForm").attr("action", appPath+"imageupload");
          //$("#uploadimage").attr("action", "http://localhost/wekancode/imageupload");
 	}	
 }

@@ -50,16 +50,8 @@
             <nav class="navbar-color">
                 <div class="nav-wrapper">
                     <ul class="left">                      
-                      <li><h1 class="logo-wrapper"><a href="dashboard.html" class="brand-logo darken-1"><img src="images/materialize-logo.png" alt="materialize logo"></a> <span class="logo-text">Materialize</span></h1></li>
+                      <li><h1 class="logo-wrapper"><a href="dashboard.html" class="brand-logo darken-1"><img src="images/materialize-logo.png" alt="materialize logo"></a> <span class="logo-text">WeKanCode</span></h1></li>
                     </ul>
-                    <div class="header-search-wrapper hide-on-med-and-down">
-                        <i class="mdi-action-search"></i>
-                        <input type="text" name="Search" class="header-search-input z-depth-2" placeholder="Search"/>
-                    </div>
-                    
-                    <!-- translation-button -->
-                    
-                    <!-- notifications-dropdown -->
                 </div>
             </nav>
         </div>
@@ -235,31 +227,67 @@
                                         </a>
 
                                         <span class="card-title activator grey-text text-darken-4 dashboardUserName" ></span>
-                                        <p><i class="mdi-action-perm-identity cyan-text text-darken-2"></i> <span id="dashboardUserDesignation"></span></p>
+                                        <p><i class="mdi-action-perm-identity cyan-text text-darken-2"></i> <span id="dashboardUserDesignation"></span>
+                                        </p>
                                         <p><i class="mdi-action-perm-phone-msg cyan-text text-darken-2"></i> <span id="userTel"></span></p>
                                         <p><i class="mdi-communication-email cyan-text text-darken-2"></i> <span id="userEmail"></span></p>
 
                                     </div>
                                     <div class="card-reveal">
                                         <span class="card-title grey-text text-darken-4"><span class="dashboardUserName"></span> <i class="mdi-navigation-close right"></i></span>
-                                        
+                                       <span class="profileAboutMe"></span> 
                                     </div>
                                 </div>
                             </div>
 
                         </div>
+<form action="" method="post" enctype="multipart/form-data" id="MyUploadForm">
+<input type="hidden" name="user_id" id="user_id" value="">
+<div class="image-upload">
+<label for="FileInput">
+        
+        
+        <i class="mdi-image-camera-alt" style="font-size:50px"></i>
+    </label>
+
+<input name="FileInput" id="FileInput" type="file" />
+</div>
+<input type="submit"  id="submit-btn" value="Upload Profile Image" class="btn cyan waves-effect waves-light right" />
+<img src="images/ajax-loader.gif" id="loading-img" style="display:none;" alt="Please Wait"/>
+</form>
+<div id="progressbox" ><div id="progressbar"></div ><div id="statustxt">    </div></div>
+<div id="output"></div>
+<style>
+.image-upload > input
+{
+    display: none;
+}
+</style>
+
 
                         <form class="col s12">
+                        <div class="row">
+                        <div class="file-field input-field">
+                      
+                      
+                    </div>
+                        </div>
+                       </form>
                       <div class="row">
                         <div class="input-field col s12">
+                          <h5>
+                          About Me
+                          </h5>
+                          
                           <textarea id="textarea1" class="materialize-textarea" maxlength="255"></textarea>
-                          <label for="textarea1">About Me</label>
+                          
                         </div>
+                        <br>
                       </div>
                       <button class="btn cyan waves-effect waves-light right" type="button" id="updateprofile" name="action">Update Profile
                               
                             </button>
-                    </form>
+                    
                         <br><br>
                     <!--card widgets end-->
 
@@ -422,143 +450,7 @@
             <!-- END CONTENT -->
 
             <!-- //////////////////////////////////////////////////////////////////////////// -->
-            <!-- START RIGHT SIDEBAR NAV-->
-            <aside id="right-sidebar-nav">
-                <ul id="chat-out" class="side-nav rightside-navigation">
-                    <li class="li-hover">
-                    <a href="#" data-activates="chat-out" class="chat-close-collapse right"><i class="mdi-navigation-close"></i></a>
-                    <div id="right-search" class="row">
-                        <form class="col s12">
-                            <div class="input-field">
-                                <i class="mdi-action-search prefix"></i>
-                                <input id="icon_prefix" type="text" class="validate">
-                                <label for="icon_prefix">Search</label>
-                            </div>
-                        </form>
-                    </div>
-                    </li>
-                    <li class="li-hover">
-                        <ul class="chat-collapsible" data-collapsible="expandable">
-                        <li>
-                            <div class="collapsible-header teal white-text active"><i class="mdi-social-whatshot"></i>Recent Activity</div>
-                            <div class="collapsible-body recent-activity">
-                                <div class="recent-activity-list chat-out-list row">
-                                    <div class="col s3 recent-activity-list-icon"><i class="mdi-action-add-shopping-cart"></i>
-                                    </div>
-                                    <div class="col s9 recent-activity-list-text">
-                                        <a href="#">just now</a>
-                                        <p>Jim Doe Purchased new equipments for zonal office.</p>
-                                    </div>
-                                </div>
-                                <div class="recent-activity-list chat-out-list row">
-                                    <div class="col s3 recent-activity-list-icon"><i class="mdi-device-airplanemode-on"></i>
-                                    </div>
-                                    <div class="col s9 recent-activity-list-text">
-                                        <a href="#">Yesterday</a>
-                                        <p>Your Next flight for USA will be on 15th August 2015.</p>
-                                    </div>
-                                </div>
-                                <div class="recent-activity-list chat-out-list row">
-                                    <div class="col s3 recent-activity-list-icon"><i class="mdi-action-settings-voice"></i>
-                                    </div>
-                                    <div class="col s9 recent-activity-list-text">
-                                        <a href="#">5 Days Ago</a>
-                                        <p>Natalya Parker Send you a voice mail for next conference.</p>
-                                    </div>
-                                </div>
-                                <div class="recent-activity-list chat-out-list row">
-                                    <div class="col s3 recent-activity-list-icon"><i class="mdi-action-store"></i>
-                                    </div>
-                                    <div class="col s9 recent-activity-list-text">
-                                        <a href="#">Last Week</a>
-                                        <p>Jessy Jay open a new store at S.G Road.</p>
-                                    </div>
-                                </div>
-                                <div class="recent-activity-list chat-out-list row">
-                                    <div class="col s3 recent-activity-list-icon"><i class="mdi-action-settings-voice"></i>
-                                    </div>
-                                    <div class="col s9 recent-activity-list-text">
-                                        <a href="#">5 Days Ago</a>
-                                        <p>Natalya Parker Send you a voice mail for next conference.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="collapsible-header light-blue white-text active"><i class="mdi-editor-attach-money"></i>Sales Repoart</div>
-                            <div class="collapsible-body sales-repoart">
-                                <div class="sales-repoart-list  chat-out-list row">
-                                    <div class="col s8">Target Salse</div>
-                                    <div class="col s4"><span id="sales-line-1"></span>
-                                    </div>
-                                </div>
-                                <div class="sales-repoart-list chat-out-list row">
-                                    <div class="col s8">Payment Due</div>
-                                    <div class="col s4"><span id="sales-bar-1"></span>
-                                    </div>
-                                </div>
-                                <div class="sales-repoart-list chat-out-list row">
-                                    <div class="col s8">Total Delivery</div>
-                                    <div class="col s4"><span id="sales-line-2"></span>
-                                    </div>
-                                </div>
-                                <div class="sales-repoart-list chat-out-list row">
-                                    <div class="col s8">Total Progress</div>
-                                    <div class="col s4"><span id="sales-bar-2"></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="collapsible-header red white-text"><i class="mdi-action-stars"></i>Favorite Associates</div>
-                            <div class="collapsible-body favorite-associates">
-                                <div class="favorite-associate-list chat-out-list row">
-                                    <div class="col s4"><img src="images/avatar.jpg" alt="" class="circle responsive-img online-user valign profile-image">
-                                    </div>
-                                    <div class="col s8">
-                                        <p>Eileen Sideways</p>
-                                        <p class="place">Los Angeles, CA</p>
-                                    </div>
-                                </div>
-                                <div class="favorite-associate-list chat-out-list row">
-                                    <div class="col s4"><img src="images/avatar.jpg" alt="" class="circle responsive-img online-user valign profile-image">
-                                    </div>
-                                    <div class="col s8">
-                                        <p>Zaham Sindil</p>
-                                        <p class="place">San Francisco, CA</p>
-                                    </div>
-                                </div>
-                                <div class="favorite-associate-list chat-out-list row">
-                                    <div class="col s4"><img src="images/avatar.jpg" alt="" class="circle responsive-img offline-user valign profile-image">
-                                    </div>
-                                    <div class="col s8">
-                                        <p>Renov Leongal</p>
-                                        <p class="place">Cebu City, Philippines</p>
-                                    </div>
-                                </div>
-                                <div class="favorite-associate-list chat-out-list row">
-                                    <div class="col s4"><img src="images/avatar.jpg" alt="" class="circle responsive-img online-user valign profile-image">
-                                    </div>
-                                    <div class="col s8">
-                                        <p>Weno Carasbong</p>
-                                        <p>Tokyo, Japan</p>
-                                    </div>
-                                </div>
-                                <div class="favorite-associate-list chat-out-list row">
-                                    <div class="col s4"><img src="images/avatar.jpg" alt="" class="circle responsive-img offline-user valign profile-image">
-                                    </div>
-                                    <div class="col s8">
-                                        <p>Nusja Nawancali</p>
-                                        <p class="place">Bangkok, Thailand</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        </ul>
-                    </li>
-                </ul>
-            </aside>
-            <!-- LEFT RIGHT SIDEBAR NAV-->
+            
 
         </div>
         <!-- END WRAPPER -->
@@ -572,7 +464,7 @@
     {
 
     }
-   /* .fg_wid_header
+   /* .fg_wid_headerorm
     {
         display: none;
     }
@@ -604,6 +496,7 @@
     <!-- jQuery Library -->
     <script type="text/javascript" src="js/plugins/jquery-1.11.2.min.js"></script>    
     <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/plugins/jquery.form.min.js"></script>
 
     <script type="text/javascript" src="js/custom.js"></script>
     <script type="text/javascript" src="js/activity/sync.js"></script>
@@ -614,6 +507,111 @@
 
     <script type="text/javascript" src="js/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
     <script type="text/javascript" src="js/plugins.min.js"></script>
+
+    
+    
+    <script type="text/javascript">
+$(document).ready(function() { 
+    var options = { 
+            target:   '#output',   // target element(s) to be updated with server response 
+            beforeSubmit:  beforeSubmit,  // pre-submit callback 
+            success:       afterSuccess,  // post-submit callback 
+            uploadProgress: OnProgress, //upload progress callback 
+            resetForm: true        // reset the form after successful submit 
+        }; 
+        
+     $('#MyUploadForm').submit(function(e) { 
+         e.preventDefault();
+            $(this).ajaxSubmit(options);            
+            // always return false to prevent standard browser submit and page navigation 
+            return false; 
+        }); 
+        
+
+//function after succesful file upload (when server response)
+function afterSuccess()
+{
+    $('#submit-btn').show(); //hide submit button
+    $('#loading-img').hide(); //hide submit button
+    $('#progressbox').delay( 1000 ).fadeOut(); //hide progress bar
+
+}
+
+//function to check file size before uploading.
+function beforeSubmit(){
+    //check whether browser fully supports all File API
+   if (window.File && window.FileReader && window.FileList && window.Blob)
+    {
+        
+        if( !$('#FileInput').val()) //check empty input filed
+        {
+            $("#output").html("Are you kidding me?");
+            return false
+        }
+        
+        var fsize = $('#FileInput')[0].files[0].size; //get file size
+        var ftype = $('#FileInput')[0].files[0].type; // get file type
+        
+
+        // //allow file types 
+        // switch(ftype)
+        // {
+        //     case 'image/png': 
+        //     case 'image/jpeg': 
+        //     case 'image/jpg': 
+        //     case 'image/PNG': 
+        //     case 'image/JPEG': 
+        //     case 'image/JPG': 
+            
+        //         break;
+        //     default:
+        //         $("#output").html("<b>"+ftype+"</b> Unsupported file type!");
+        //         return false
+        // }
+        
+        //Allowed file size is less than 5 MB (1048576)
+        // if(fsize>5242880) 
+        // {
+        //     $("#output").html("<b>"+bytesToSize(fsize) +"</b> Too big file! <br />File is too big, it should be less than 5 MB.");
+        //     return false
+        // }
+                
+        $('#submit-btn').hide(); //hide submit button
+        $('#loading-img').show(); //hide submit button
+        $("#output").html("");  
+    }
+    else
+    {
+        //Output error to older unsupported browsers that doesn't support HTML5 File API
+        $("#output").html("Please upgrade your browser, because your current browser lacks some new features we need!");
+        return false;
+    }
+}
+
+//progress bar function
+function OnProgress(event, position, total, percentComplete)
+{
+    //Progress bar
+    $('#progressbox').show();
+    $('#progressbar').width(percentComplete + '%') //update progressbar percent complete
+    $('#statustxt').html(percentComplete + '%'); //update status text
+    if(percentComplete>50)
+        {
+            $('#statustxt').css('color','#000'); //change status text to white after 50%
+        }
+}
+
+//function to format bites bit.ly/19yoIPO
+function bytesToSize(bytes) {
+   var sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB'];
+   if (bytes == 0) return '0 Bytes';
+   var i = parseInt(Math.floor(Math.log(bytes) / Math.log(1024)));
+   return Math.round(bytes / Math.pow(1024, i), 2) + ' ' + sizes[i];
+}
+
+}); 
+
+</script>
 
     <!--custom-script.js - Add your own theme custom JS-->
     

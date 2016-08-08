@@ -50,16 +50,8 @@
             <nav class="navbar-color">
                 <div class="nav-wrapper">
                     <ul class="left">                      
-                      <li><h1 class="logo-wrapper"><a href="dashboard.html" class="brand-logo darken-1"><img src="images/materialize-logo.png" alt="materialize logo"></a> <span class="logo-text">Materialize</span></h1></li>
+                      <li><h1 class="logo-wrapper"><a href="dashboard.html" class="brand-logo darken-1"><img src="images/materialize-logo.png" alt="materialize logo"></a> <span class="logo-text">WeKanCode</span></h1></li>
                     </ul>
-                    <div class="header-search-wrapper hide-on-med-and-down">
-                        <i class="mdi-action-search"></i>
-                        <input type="text" name="Search" class="header-search-input z-depth-2" placeholder="Search"/>
-                    </div>
-                    
-                    <!-- translation-button -->
-                    
-                    <!-- notifications-dropdown -->
                 </div>
             </nav>
         </div>
@@ -249,34 +241,48 @@
                             </div>
 
                         </div>
-                        <form action="http://localhost/wekancode/imageupload" method="post" enctype="multipart/form-data" id="MyUploadForm">
+<form action="" method="post" enctype="multipart/form-data" id="MyUploadForm">
 <input type="hidden" name="user_id" id="user_id" value="">
+<div class="image-upload">
+<label for="FileInput">
+        
+        
+        <i class="mdi-image-camera-alt" style="font-size:50px"></i>
+    </label>
+
 <input name="FileInput" id="FileInput" type="file" />
-<input type="submit"  id="submit-btn" value="Upload" />
+</div>
+<input type="submit"  id="submit-btn" value="Upload Profile Image" class="btn cyan waves-effect waves-light right" />
 <img src="images/ajax-loader.gif" id="loading-img" style="display:none;" alt="Please Wait"/>
 </form>
-<div id="progressbox" ><div id="progressbar"></div ><div id="statustxt">	</div></div>
+<div id="progressbox" ><div id="progressbar"></div ><div id="statustxt">    </div></div>
 <div id="output"></div>
+<style>
+.image-upload > input
+{
+    display: none;
+}
+</style>
 
 
                         <form class="col s12">
                         <div class="row">
                         <div class="file-field input-field">
-                      <div class="btn">
-                        <span>Profile Image</span>
-                        <input type="file" id="profile_image">
-                      </div>
-                      <div class="file-path-wrapper">
-                        <input class="file-path validate valid" type="text">
-                      </div>
+                      
+                      
                     </div>
                         </div>
                        </form>
                       <div class="row">
                         <div class="input-field col s12">
+                          <h5>
+                          About Me
+                          </h5>
+                          
                           <textarea id="textarea1" class="materialize-textarea" maxlength="255"></textarea>
-                          <label for="textarea1">About Me</label>
+                          
                         </div>
+                        <br>
                       </div>
                       <button class="btn cyan waves-effect waves-light right" type="button" id="updateprofile" name="action">Update Profile
                               
@@ -458,7 +464,7 @@
     {
 
     }
-   /* .fg_wid_header
+   /* .fg_wid_headerorm
     {
         display: none;
     }
@@ -514,7 +520,8 @@ $(document).ready(function() {
             resetForm: true        // reset the form after successful submit 
         }; 
         
-     $('#MyUploadForm').submit(function() { 
+     $('#MyUploadForm').submit(function(e) { 
+         e.preventDefault();
             $(this).ajaxSubmit(options);            
             // always return false to prevent standard browser submit and page navigation 
             return false; 
@@ -546,32 +553,28 @@ function beforeSubmit(){
         var ftype = $('#FileInput')[0].files[0].type; // get file type
         
 
-        //allow file types 
-        switch(ftype)
-        {
-            case 'image/png': 
-            case 'image/gif': 
-            case 'image/jpeg': 
-            case 'image/pjpeg':
-            case 'text/plain':
-            case 'text/html':
-            case 'application/x-zip-compressed':
-            case 'application/pdf':
-            case 'application/msword':
-            case 'application/vnd.ms-excel':
-            case 'video/mp4':
-                break;
-            default:
-                $("#output").html("<b>"+ftype+"</b> Unsupported file type!");
-                return false
-        }
+        // //allow file types 
+        // switch(ftype)
+        // {
+        //     case 'image/png': 
+        //     case 'image/jpeg': 
+        //     case 'image/jpg': 
+        //     case 'image/PNG': 
+        //     case 'image/JPEG': 
+        //     case 'image/JPG': 
+            
+        //         break;
+        //     default:
+        //         $("#output").html("<b>"+ftype+"</b> Unsupported file type!");
+        //         return false
+        // }
         
         //Allowed file size is less than 5 MB (1048576)
-        if(fsize>5242880) 
-        {
-            $("#output").html("<b>"+bytesToSize(fsize) +"</b> Too big file! <br />File is too big, it should be less than 5 MB.");
-            return false
-        }
+        // if(fsize>5242880) 
+        // {
+        //     $("#output").html("<b>"+bytesToSize(fsize) +"</b> Too big file! <br />File is too big, it should be less than 5 MB.");
+        //     return false
+        // }
                 
         $('#submit-btn').hide(); //hide submit button
         $('#loading-img').show(); //hide submit button

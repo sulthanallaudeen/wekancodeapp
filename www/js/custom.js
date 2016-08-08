@@ -22,9 +22,11 @@ else
 {
 //Can't detect the App state, So concluding as localhost
 var appPath = 'http://192.168.1.9/wekancode/';
+var appPath = 'http://wekancode.com/wekancode/';
 }
 //Setting the localstorage for API Calls
 //var appPath = 'http://wekancode.com/wekancode/';
+
 
 
 localStorage.setItem("currentPath", currentpath);

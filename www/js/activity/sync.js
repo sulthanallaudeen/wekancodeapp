@@ -25,7 +25,7 @@ function checklogin()
 		var user_email = localStorage.getItem("user_email");
 		var user_emp_id = localStorage.getItem("user_emp_id");
 		var user_designation = localStorage.getItem("user_designation");
-		var user_image = appPath+'public/admin/images/team/'+localStorage.getItem("user_emp_id")+'.jpg';
+		var user_image = appPath+'public/admin/images/team/'+localStorage.getItem("user_image");
 
 		$("#user_name").html(user_name)
 		$("#user_role").html(user_designation)

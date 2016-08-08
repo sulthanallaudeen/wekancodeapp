@@ -62,6 +62,7 @@ else
                     localStorage.setItem("user_designation", message.data.designation);
                     localStorage.setItem("user_image", message.data.image);
                     localStorage.setItem("user_tel", message.data.phone);
+                    localStorage.setItem("user_about", message.data.about);
                     window.location.href = "dashboard.html";
                 } else
                 {
